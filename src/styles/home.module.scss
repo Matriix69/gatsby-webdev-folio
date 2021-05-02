@@ -1,0 +1,33 @@
+$nav-color: #f0f6fc;
+$color-text-primary:#c9d1d9;
+
+.hero{
+    position: relative;
+    // margin-top: 20px;
+    padding: 120px 0 150px;
+    // height: 300px;
+    color: $color-text-primary;
+    // overflow: hidden;
+
+    h1{
+        font-size: 30px;
+        z-index: 22;
+        font-weight: 400;
+
+        @media screen and (min-width: 700px) {
+			font-size: 2.5rem
+		}
+    }
+
+    .subheader{
+        font-size: 14px;
+        line-height: 1.6;
+        color: rgba(255,255,255,0.8);
+        margin-top: 10px;
+
+        @media screen and (min-width: 700px) {
+			font-size: 1rem
+		}
+    }
+}
+

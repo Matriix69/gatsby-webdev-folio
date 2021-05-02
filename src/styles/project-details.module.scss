@@ -1,0 +1,119 @@
+.content{
+  background-color: #161b22;
+  position: relative;
+  margin-top: -60px;
+  padding: 15px;
+  transition: all .3s ease;
+
+  h2 {
+    font-size: 30px;
+    // margin-top: 80px;
+  }
+  h3 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  a{
+    display: inline-block;
+    padding: 15px 25px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease;
+    background: linear-gradient(to right, #0665A3, #3498db);
+  
+  
+    &:hover{
+        transform: translateY(-3px);
+    }
+  }
+}
+
+.slideshow {
+	width: 100%;
+	max-width: 90%;
+	text-align: center;
+	position: relative;
+	// height: 500px;
+	margin: 0 auto;
+  margin-bottom:46%;
+	-webkit-tap-highlight-color: transparent;
+
+    // @media screen and (max-width: 1080px) {
+    //   height: 390px;
+    // }
+    // @media screen and (max-width: 920px) {
+    //   height: 350px;
+    // }
+    // @media screen and (max-width: 850px) {
+    //   height: 320px;
+    // }
+    // @media screen and (max-width: 680px) {
+    //   height: 280px;
+    // }
+    // @media screen and (max-width: 600px) {
+    //   height: 240px;
+    // }
+    .slideshowSlider {
+      position: relative;
+    -webkit-tap-highlight-color: transparent;
+
+      .slide {
+        transition: all 0.9s ease-in;
+        position: absolute;
+        height: 400px;
+        width: 100%;
+        border-radius: 40px;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+      }
+    }
+  }
+  
+  .slideshowDots {
+    position: relative;
+    // bottom: -22rem;
+    // margin-bottom: 56%;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+      .slideshowDot {
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 15px 5px 0px;
+        background-color: #ABB7B7;
+        transition: all 0.9s ease-in;
+        -webkit-tap-highlight-color: transparent;
+      }
+  }
+  
+  .btnActive {
+	background-color: #3498db !important;
+  }
+  
+  .show {
+	opacity: 1 !important;
+  }
+
+.details h2 {
+  font-size: 3.5em;
+  margin-top: 80px;
+}
+.details h3 {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.html {
+  margin-top: 40px;
+}
+.featured {
+  margin-bottom: 40px;
+}
+
