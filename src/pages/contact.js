@@ -6,6 +6,7 @@ import * as styles from '../styles/contact.module.scss'
 import { Form, Field } from 'react-final-form'
 import { BsCheckCircle, BsXCircle  } from 'react-icons/bs';
 import emailjs from 'emailjs-com';
+import Seo from '../components/Seo'
 
 export default function Contact() {
 
@@ -41,6 +42,11 @@ export default function Contact() {
 
     return (
         <Layout>
+            <Seo 
+                pageTitle="Contact"
+                pageUrl="contact"
+                pageDescription="I will contact you back as soon as possible"
+            />
             <Hero
                 title={'Get In Touch'}
                 description={'Get in touch with me and I will get you back as soon as possible.'}

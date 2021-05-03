@@ -4,11 +4,17 @@ import Layout from '../components/Layout'
 import { StaticImage } from "gatsby-plugin-image"
 import * as styles from '../styles/about.module.scss'
 import { Link } from 'gatsby'
+import Seo from '../components/Seo'
 
 export default function About() {
     const skills = ['JavaScript', 'React(Gatsby)', 'Firebase', 'Aws', 'Node.js'];
     return (
         <Layout>
+            <Seo 
+                pageTitle="About"
+                pageUrl="about"
+                pageDescription="Personal is the perfect theme for developers, designers and other creatives."
+            />
             <Hero
                 title={'About'}
                 description={'A self-taught developer from nigeria'}

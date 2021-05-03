@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -33,10 +34,35 @@ module.exports = {
         showSpinner: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "matrix",
+        short_name: "matrix",
+        start_url: "/",
+        background_color: "#0d1117",
+        theme_color: "#c9d1d9",
+        display: "standalone",
+        icon: "src/images/icon.png", 
+        crossOrigin: `use-credentials`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about/`, `/contact/*`],
+      },
+    },
   ],
   siteMetadata: {
     title: 'Matrix.io',
     description: 'matrix dev portfolio',
-    contact: 'matriixx.cali@gmail.com'
+    contact: 'matriixx.cali@gmail.com',
+    url: 'https://matrix-28893.web.app',
+    Image: '',
+    twitterUSername:'@mvtrixx',
+    fbAppID:'',
+    author: 'matrix',
+    keywords: `software development, UI, web, dev, developer, matrix, javascript`,
   }
 }

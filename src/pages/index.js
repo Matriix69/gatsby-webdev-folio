@@ -10,6 +10,8 @@ import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage} from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby";
 
+import Seo from '../components/Seo'
+
 
 const typingSpeed = 10;
 const deleteSpeed = 1;
@@ -23,6 +25,9 @@ export default function Home({data}) {
 
   return (
     <Layout>
+      <Seo 
+        pageTitle="porfolio"
+      />
       <section className={styles.hero}>
 
         <Particles

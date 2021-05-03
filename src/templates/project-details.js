@@ -5,12 +5,13 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import * as styles from '../styles/project-details.module.scss'
 import { graphql } from 'gatsby'
 import { useSwipeable } from 'react-swipeable'
+import Seo from '../components/Seo'
 
 export default function ProjectDetails({data}) {
 
     //destructure grahpql data
     const {html} = data.markdownRemark
-    const {title, stack, featuredImg, carousel1, carousel2, carousel3} = data.markdownRemark.frontmatter
+    const {title, stack, slug, description, featuredImg, carousel1, carousel2, carousel3} = data.markdownRemark.frontmatter
 
     //images for slide show
     const slides = [
@@ -63,6 +64,11 @@ export default function ProjectDetails({data}) {
 
     return (
         <Layout>
+            <Seo 
+                pageTitle={title}
+                pageUrl={`projects/${slug}`}
+                pageDescription={description}
+            />
             <Hero
                 title={title}
                 description={stack}
@@ -71,7 +77,7 @@ export default function ProjectDetails({data}) {
                 }
             />
             <section className='wrap wrapper'>
-                <div className={styles.content}>
+                <div className={styles.project_content}>
 
                     <div className={styles.slideshow}>
                         <div className={styles.slideshowSlider} {...handlers}>
@@ -112,6 +118,8 @@ export const query = graphql`
         frontmatter {
             stack
             title
+            slug
+            description
             featuredImg {
                 childImageSharp {
                     gatsbyImageData
