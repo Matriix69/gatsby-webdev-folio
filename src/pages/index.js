@@ -1,39 +1,56 @@
-import React, {useState} from "react"
+import React from "react"
+
+//gatsby component import
+import { graphql, Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
+
+//contants file
+import {particlesOptions, Info} from '../constants/constants'
+
+//styles
 import '../styles/global.scss'
-import Particles from "react-tsparticles";
-import Layout from '../components/Layout';
 import * as styles from '../styles/home.module.scss'
+
+//paticles and typewritter effect
+import Particles from "react-tsparticles";
 import Typewriter from 'typewriter-effect';
 
-import {particlesOptions, Info, socialLinks} from '../constants/constants'
-import { StaticImage } from "gatsby-plugin-image"
-import { GatsbyImage} from "gatsby-plugin-image"
-import { graphql, Link } from "gatsby";
+//iocns
+import { BiCodeAlt  } from 'react-icons/bi';
+import { FaReact, FaNodeJs  } from 'react-icons/fa';
+import { IoLogoFirebase  } from 'react-icons/io5';
 
+//my components
 import Seo from '../components/Seo'
+import Projects from '../components/Projects'
 
 
 const typingSpeed = 10;
 const deleteSpeed = 1;
-const pauseDelay = 3000;
 
 
 export default function Home({data}) {
-  const [hide, setHide] = useState(false)
 
+  function particlesLoaded(container) {
+    console.log(container);
+  }
   const projects = data.projects.nodes
 
   return (
-    <Layout>
-      <Seo 
-        pageTitle="porfolio"
+    <>
+
+      <Seo
+        pageTitle="iMatrix | Full-Stack Web Developer | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws"
       />
+
       <section className={styles.hero}>
 
         <Particles
           id="tsparticles"
           options={particlesOptions}
+          loaded={particlesLoaded}
         />
+        
         <StaticImage 
           className="hero__image" 
           loading="eager"  
@@ -50,27 +67,12 @@ export default function Home({data}) {
                   .changeDelay(typingSpeed)
                   .changeDeleteSpeed(deleteSpeed)
                   .typeString(Info.header1)
-                  .pauseFor(pauseDelay)
-                  .deleteChars(22)
-                  .typeString(Info.header2)
-                  .pauseFor(pauseDelay)
-                  .deleteChars(19)
-                  .typeString(Info.header3)
-                  .pauseFor(pauseDelay)
-                  .deleteChars(11)
-                  .typeString(Info.header4)
-                  .pauseFor(pauseDelay)
-                  .deleteAll(1)
-                  .typeString(Info.header5)
-                  .callFunction(() => {
-                    console.log('All strings were deleted');
-                  })
                   .start();
               }}
             />
           </h1>
 
-          <div className={styles.subheader + (hide ? " hide" : '')}>
+          <div className={styles.subheader}>
             <Typewriter 
               onInit={(typewriter) => {
                 typewriter
@@ -78,66 +80,82 @@ export default function Home({data}) {
                   .changeDeleteSpeed(deleteSpeed)
                   .pauseFor(600)
                   .typeString(Info.subHeader1)
-                  .pauseFor(pauseDelay)
-                  .deleteAll(1)
-                  .typeString(Info.subHeader2)
-                  .pauseFor(pauseDelay)
-                  .deleteAll(1)
-                  .typeString(Info.subHeader3)
-                  .pauseFor(1500)
-                  .deleteAll(1)
-                  .typeString(Info.subHeader4)
-                  .pauseFor(4000)
-                  .deleteAll(1)
-                  .callFunction(() => {
-                    setHide(true)
-                  })
                   .start();
               }}
             />
           </div>
 
         </div>
-
-        <div className={"headerSocial" + (!hide ? ' hide' : '')}>
-          <ul className={"socials"}>	
-            {socialLinks.map((socialLinks, idx) => (
-              <li className={"socials__item"} key={idx}>
-                <a href={socialLinks.link} target="_blank" rel="noreferrer">
-                  {socialLinks.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
       </section>
       
       <section className="listing" >
         <div className="wrap">
-          {projects.map(projects => (
-            <Link className="post" to={'/projects/' + projects.frontmatter.slug } key={projects.id}>
-              <div className="post__image-wrap">
-                <GatsbyImage className="img" image={projects.frontmatter.thumb.childImageSharp.gatsbyImageData} alt={projects.frontmatter.title}/>
-              </div>
 
-              <div className="post__content-wrap">
-                <div className="post__content">
-                    <div>
-                        <p className="post__subtitle">{projects.frontmatter.stack}</p>
-                        <h2 className="post__title">{projects.frontmatter.title}</h2>
-                        <p className="post__description">{projects.frontmatter.description}</p>
-                    </div>
-                    <div className="see-more">
-                        <p>See more</p>
-                    </div>
-                </div>
+          <div className="info-list" >
+              <div className="info-list-icon" >
+                  <BiCodeAlt/>
+              </div> 
+              <div className="info-list-paragraph">
+                  <p >
+                      I am a <strong>full-stack developer</strong> /
+                      <strong> Content creator</strong> based in Nigeria, right in the
+                      heart of Africa. I can do remote work for any place in the world.
+                  </p> 
+                  <Link to="/contact" >
+                      Set up a meeting
+                  </Link>
               </div>
-            </Link>        
-          ))} 
+          </div>
+
+          <div className="info-list" >
+              <div className="info-list-icon" >
+                  <FaReact/>
+              </div> 
+              <div className="info-list-paragraph">
+                  <p >
+                      For <em>frontend</em> work, I am personally a huge fan of
+                      <b > React.js</b> and it's ecosystem
+                      (e.g. <b> Gatsby.js & Next.js</b>).
+                  </p> 
+              </div>
+          </div>
+
+          <div className="info-list" >
+              <div className="info-list-icon" >
+                  <FaNodeJs/>
+              </div> 
+              <div className="info-list-paragraph">
+                  <p >
+                      For <em>backend</em> work, my go-to tool is <b>Node.js</b>. very efficient and overall developer productivity. 
+                      I have also worked with PHP in the past
+
+                  </p> 
+              </div>
+          </div>
+
+          <div className="info-list" >
+              <div className="info-list-icon" >
+                  <IoLogoFirebase/>
+              </div> 
+              <div className="info-list-paragraph">
+                  <p >
+                    For my <em>serverless and cloud computing</em>, my go to tool is <b>Firebase</b>, 
+                    which is part of <b>Googles cloud platform</b> <em>(gcp)</em>, also <b>Amazon web services</b> <em>(aws)</em> as my alternative.
+                  </p> 
+              </div>
+          </div>
+
+          <hr />
+              
+          <h1 className="post-heading">My recent Works</h1>
+
+          {projects.map((projects, index) => {
+              return <Projects projects={projects} key={index} />       
+          })} 
+
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

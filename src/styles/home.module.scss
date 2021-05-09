@@ -1,9 +1,11 @@
-@import './variables.scss';
-
 .hero{
     position: relative;
     padding: 120px 0 150px;
-    color: $color-text-primary;
+    color: var(--hero-text-color);
+
+    @media screen and (max-width: 700px) {
+        padding: 100px 0 130px;
+    }
 
     h1{
         font-size: 30px;
@@ -16,14 +18,9 @@
     }
 
     .subheader{
-        font-size: 14px;
+        font-size: 18px;
         line-height: 1.6;
         color: rgba(255,255,255,0.8);
         margin-top: 10px;
-
-        @media screen and (min-width: 700px) {
-          font-size: 1rem
-        }
     }
 }
-

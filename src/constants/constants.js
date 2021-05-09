@@ -1,5 +1,8 @@
 import React from "react"
 import { FiTwitter, FiLinkedin, FiGithub  } from 'react-icons/fi';
+import { RiHomeSmileLine  } from 'react-icons/ri';
+import { BsCardText, BsInfoCircle  } from 'react-icons/bs';
+import { SiMailDotRu  } from 'react-icons/si';
 
 export const particlesOptions={
     fpsLimit: 60,
@@ -76,13 +79,13 @@ export const particlesOptions={
 }
 
 export const Info = {
-    header1 : "Hey there, I'm Matrix.",
+    header1 : "Hey there, I'm Matrix <span aria-hidden='true' class='wave'>👋</span>",
     header2 : "I'm a software developer.",
     header3 : "maker.",
     header4 : " build cool things for the web",
     header5 : "Check out my work below.",
 
-    subHeader1 : "Nice to meet you.",
+    subHeader1 : "Nice to meet you!.",
     subHeader2 : "Javascript, NodeJS, Firebase, Aws, HTML, CSS.",
     subHeader3 : "illustrator, Content creator",
     subHeader4 : "Learning new things everyday",
@@ -91,39 +94,64 @@ export const Info = {
 export const style = {
     fontSize: "19px",
     background: "rgba(255,255,255,0)",
-    color: "#132930",
+    color: "var(--bg-alt-color)",
     overflow: "hidden"
 }
 
 export const navLink = [
   {
-    path: '/',
-    title: 'Porfolio'
-  },
-  {
     path: '/blog',
-    title: 'Blog'
+    title: 'Blog',
+    icon: <BsCardText/>
   },
   {
     path: '/about',
-    title: 'About'
+    title: 'About',
+    icon: <BsInfoCircle/>
   },
   {
     path: '/contact',
-    title: 'Contact'
+    title: 'Get in touch',
+    icon: <SiMailDotRu/>
+  }
+]
+
+export const navLinkMobile = [
+  {
+    path: '/',
+    title: 'Porfolio',
+    icon: <RiHomeSmileLine/>
+  },
+  {
+    path: '/blog',
+    title: 'Blog',
+    icon: <BsCardText/>
+  },
+  {
+    path: '/about',
+    title: 'About',
+    icon: <BsInfoCircle/>
+  },
+  {
+    path: '/contact',
+    title: 'Contact',
+    icon: <SiMailDotRu/>
   }
 ]
 
 export const socialLinks = [
   {
+    title: "Twitter",
     link: 'https://twitter.com/Mvtrixx',
     icon: <FiTwitter style={style}/>
   },
   {
+    title: "Linkedin",
     link: 'https://www.linkedin.com/in/isaac-chukwuka-2208a1209/',
     icon: <FiLinkedin style={style}/>,
   },
   {
+    title: "Github",
     link: 'https://github.com/Matriix69',
     icon: <FiGithub style={style}/>
   }

@@ -1,5 +1,4 @@
 import React,{useEffect, useState, useRef} from 'react'
-import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as styles from '../styles/project-details.module.scss'
@@ -63,7 +62,7 @@ export default function ProjectDetails({data}) {
     
 
     return (
-        <Layout>
+        <>
             <Seo 
                 pageTitle={title}
                 pageUrl={`projects/${slug}`}
@@ -103,11 +102,11 @@ export default function ProjectDetails({data}) {
                     </div>
                     
                     <h2>{title}</h2>
-                    <h3>{stack}</h3>
+                    <h6>{stack}</h6>
                     <div dangerouslySetInnerHTML={{__html: html}} />
                 </div>
             </section>
-        </Layout>
+        </>
     )
 }
 

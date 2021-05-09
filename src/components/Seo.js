@@ -13,7 +13,7 @@ const SEO = ({ pageTitle, pageUrl, pageDescription, pageImage }) => (
             title
             description
             url
-            Image
+            image
             author
             twitterUSername
             fbAppID

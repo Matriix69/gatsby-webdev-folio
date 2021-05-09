@@ -1,15 +1,14 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import Layout from '../components/Layout'
 import { StaticImage } from "gatsby-plugin-image"
 import * as styles from '../styles/contact.module.scss'
 import Seo from '../components/Seo'
 
 export default function blog() {
     return (
-        <Layout>
+        <>
             <Seo 
-                pageTitle="Blog"
+                pageTitle="iMatrix | Full-Stack Web Developer | Blog"
                 pageUrl="blog"
                 pageDescription="Interests, hobbies, tutorials, coding and more"
             />
@@ -32,6 +31,6 @@ export default function blog() {
                     <p>nice to see u around</p>
                 </div>
             </section>
-        </Layout>
+        </>
     )
 }

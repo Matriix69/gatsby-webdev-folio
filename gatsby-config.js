@@ -13,6 +13,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-dark-mode',
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -37,8 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "matrix",
-        short_name: "matrix",
+        name: "imatrix",
+        short_name: "imatrix",
         start_url: "/",
         background_color: "#0d1117",
         theme_color: "#c9d1d9",
@@ -55,14 +57,14 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: 'Matrix.io',
-    description: 'matrix dev portfolio',
-    contact: 'matriixx.cali@gmail.com',
+    title: 'iMatrix.dev',
+    description: "Full-Stack Web Developer | matrix | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws",
+    contact: 'hello@imatrix.dev',
     url: 'https://matrix-28893.web.app',
-    Image: '',
+    image: `https://matrix-28893.web.app/isaac-logo.png`,
     twitterUSername:'@mvtrixx',
     fbAppID:'',
     author: 'matrix',
-    keywords: `software development, UI, web, dev, developer, matrix, javascript`,
+    keywords: `software development, JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws`,
   }
 }

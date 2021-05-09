@@ -1,5 +1,5 @@
 .project_content{
-  background-color: #161b22;
+  background-color: var(--bg-alt-color);
   position: relative;
   margin-top: -60px;
   padding: 15px;
@@ -9,35 +9,37 @@
     font-size: 30px;
     // margin-top: 80px;
   }
-  h3 {
-    font-size: 2em;
-    font-weight: 400;
+  h6 {
+    font-size: 14px;
     margin-bottom: 40px;
   }
+  p {
+    margin-top: 15px;
+    line-height: 1.8;
+    letter-spacing: 0em;
+  }
   a:first-of-type{
-    display: inline-block;
-    padding: 10px 25px;
-    margin-top: 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: all .3s ease;
-    background: linear-gradient(to right, #0665A3, #3498db);
-    margin-right: 10px;
-  
-  
-    &:hover{
-        transform: translateY(-3px);
-    }
+      padding: 15px 25px;
+      font-size: 17px;
+      border: 2px solid var(--accent);
+      border-radius: .5rem;
+      color: var(--accent);
+      cursor: pointer;
+      font-weight: 600;
+      background: transparent;
+      transition: all .3s ease;
+
+      &:hover{
+        color: #fff;
+        background: var(--accent);
+      }
   }
   a:last-of-type{
     display: inline-block;
-    background: linear-gradient(to right, #0665A3 -100%, #3498db 100%);
-    -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;	
-    // font-size: 17px;
     font-weight: 700;
+    color: var(--accent) ;
+    margin-left: 5px;
     transition: all .3s ease;
-    letter-spacing: -1px;
     
       &:hover{
         transform: translateX(+5px);
@@ -51,7 +53,6 @@
 	max-width: 90%;
 	text-align: center;
 	position: relative;
-	// height: 500px;
 	margin: 0 auto;
   margin-bottom:46%;
 	-webkit-tap-highlight-color: transparent;
@@ -76,8 +77,6 @@
   
   .slideshowDots {
     position: relative;
-    // bottom: -22rem;
-    // margin-bottom: 56%;
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
@@ -95,7 +94,7 @@
   }
   
   .btnActive {
-	background-color: #3498db !important;
+	background-color: var(--accent) !important;
   }
   
   .show {

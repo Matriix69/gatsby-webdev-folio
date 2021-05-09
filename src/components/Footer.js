@@ -1,6 +1,9 @@
 import React from 'react'
 import {socialLinks} from '../constants/constants'
 import { graphql, useStaticQuery} from "gatsby";
+import { RiGatsbyLine } from 'react-icons/ri';
+
+
 
 export default function Footer() {
 
@@ -19,8 +22,8 @@ export default function Footer() {
         <footer>
             <div  className="wrap">
                 <div className="logo-email">
-                    <b>Matrix</b>
-                    <a href={`mailto:${contact}`}>{contact}</a>
+                    <h2>Isaac chukwuka</h2>
+                    <a href={`mailto:${contact}`}><p>{contact}</p></a>
                     <div className="headerSocial">
                         <ul className="socials">
                             {socialLinks.map((socialLinks, idx) => (
@@ -33,13 +36,20 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <p className="copyright">
-                    copyright © developed by matrix 2021. All rights reserved.<br/>
-                    <b>
-                        <q>There are 2 ways to write error-free program. Only the third one works.</q><br/>
-                        <b>-- Alan Perlis --</b>
-                    </b>
-                </p>
+
+                <div className="copyright">
+                    <p >Made with <g-emoji class="g-emoji" alias="heart" >❤</g-emoji> by matrix © 2021</p>
+                    <p>Created with&nbsp;<RiGatsbyLine style={{color: '#ad5cff'}}/></p>
+
+                    <hr/>
+
+                    <p >
+                        <b>
+                            <q>There are 2 ways to write error-free program. Only the third one works.</q><br/>
+                            <b>-- Alan Perlis --</b>
+                        </b>
+                    </p>
+                </div>
             </div>
             
 		</footer>

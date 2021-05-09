@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 import Hero from '../components/Hero'
-import Layout from '../components/Layout'
 import { StaticImage } from "gatsby-plugin-image"
 import * as styles from '../styles/contact.module.scss'
 import { Form, Field } from 'react-final-form'
 import { BsCheckCircle, BsXCircle  } from 'react-icons/bs';
 import emailjs from 'emailjs-com';
 import Seo from '../components/Seo'
+import { socialLinks } from '../constants/constants'
 
 export default function Contact() {
 
@@ -41,11 +41,10 @@ export default function Contact() {
     }
 
     return (
-        <Layout>
+        <>
             <Seo 
-                pageTitle="Contact"
+                pageTitle="iMatrix | Full-Stack Web Developer | Contact"
                 pageUrl="contact"
-                pageDescription="I will contact you back as soon as possible"
             />
             <Hero
                 title={'Get In Touch'}
@@ -60,6 +59,11 @@ export default function Contact() {
             />
             <section className='wrap wrapper'>
                 <div className={styles.content}>
+                    <p>Whether you are interested to do business with me, want to chat about some of my content, just want to hang out, <strong> 
+                    or Just a connection from one developer to developer</strong>. I am happy to talk to you.
+                        Feel free to reach out anytime,
+                        I got you! 🙂
+                    </p>
                     
                     <Form
                         onSubmit={onSubmit}
@@ -119,8 +123,8 @@ export default function Contact() {
                                         </div>
                                         )}
                                     </Field>
-                                    <div className={styles.button_wrapper}>
-                                        <button type="submit" disabled={submitting}>
+                                    <div className={"button_wrapper"}>
+                                        <button className="btn" type="submit" disabled={submitting}>
                                             {submitting ? 'Sending...' : 'Contact me'}
                                         </button>
                                     </div>
@@ -128,7 +132,22 @@ export default function Contact() {
                             </form>
                         )}
                     />
+
+                    <p style={{textAlign: "center"}}>
+                        Feel free to check out my social media presence below to get to know me better.
+                    </p>
                     
+                    <div className="headerSocial" style={{animation: "none", marginBottom:"20px"}}>
+                        <ul className="socials">
+                            {socialLinks.map((socialLinks, idx) => (
+                                <li className={"socials__item"} key={idx}>
+                                    <a href={socialLinks.link} target="_blank" rel="noreferrer">
+                                        {socialLinks.icon}
+                                    </a>   
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -165,6 +184,6 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </>
     )
 }
