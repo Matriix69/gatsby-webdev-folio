@@ -26,9 +26,8 @@ export default function blog() {
             <section className='wrap wrapper'>
                 <div className={styles.content}>
                     <h2 id="changelog-10">Post 1.0</h2>
-                    <p>nothing here yet</p>
-                    <p>stay around for when i make a new post</p>
-                    <p>nice to see u around</p>
+                    <p>nothing here yet </p>
+                    <p>stay around for when i make a new post!</p>
                 </div>
             </section>
         </>

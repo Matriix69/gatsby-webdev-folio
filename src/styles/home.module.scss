@@ -1,14 +1,14 @@
 .hero{
     position: relative;
-    padding: 120px 0 150px;
+    padding: 120px 0 200px;
     color: var(--hero-text-color);
 
     @media screen and (max-width: 700px) {
-        padding: 100px 0 130px;
+        padding: 80px 0 180px;
     }
 
     h1{
-        font-size: 30px;
+        font-size: 28px;
         z-index: 22;
         font-weight: 400;
 
@@ -23,4 +23,15 @@
         color: rgba(255,255,255,0.8);
         margin-top: 10px;
     }
+}
+.typeEffect{
+    position: absolute;
+    left: 0; 
+  right: 0; 
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto; 
+  margin-right: auto; 
 }

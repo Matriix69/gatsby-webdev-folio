@@ -79,13 +79,13 @@ export const particlesOptions={
 }
 
 export const Info = {
-    header1 : "Hey there, I'm Matrix <span aria-hidden='true' class='wave'>👋</span>",
+    header1 : "<h1>Hey there, I'm Matrix <span aria-hidden='true' class='wave'>👋</span></h1>",
     header2 : "I'm a software developer.",
     header3 : "maker.",
     header4 : " build cool things for the web",
     header5 : "Check out my work below.",
 
-    subHeader1 : "Nice to meet you!.",
+    subHeader1 : "<p>Nice to meet you!.</p>",
     subHeader2 : "Javascript, NodeJS, Firebase, Aws, HTML, CSS.",
     subHeader3 : "illustrator, Content creator",
     subHeader4 : "Learning new things everyday",

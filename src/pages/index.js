@@ -60,32 +60,21 @@ export default function Home({data}) {
         <div className="hero__overlay"></div>
 
         <div className={'wrap wrap_padding mainpage'}>
-          <h1>
+          <div className={styles.typeEffect}>
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
                   .changeDelay(typingSpeed)
                   .changeDeleteSpeed(deleteSpeed)
                   .typeString(Info.header1)
-                  .start();
-              }}
-            />
-          </h1>
-
-          <div className={styles.subheader}>
-            <Typewriter 
-              onInit={(typewriter) => {
-                typewriter
-                  .changeDelay(typingSpeed)
-                  .changeDeleteSpeed(deleteSpeed)
                   .pauseFor(600)
                   .typeString(Info.subHeader1)
                   .start();
               }}
             />
           </div>
-
         </div>
+
       </section>
       
       <section className="listing" >
@@ -114,7 +103,7 @@ export default function Home({data}) {
               <div className="info-list-paragraph">
                   <p >
                       For <em>frontend</em> work, I am personally a huge fan of
-                      <b > React.js</b> and it's ecosystem
+                      <b>  React.js</b> and it's ecosystem
                       (e.g. <b> Gatsby.js & Next.js</b>).
                   </p> 
               </div>
