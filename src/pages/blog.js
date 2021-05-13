@@ -8,7 +8,7 @@ export default function blog() {
     return (
         <>
             <Seo 
-                pageTitle="iMatrix | Full-Stack Web Developer | Blog"
+                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | Blog"
                 pageUrl="blog"
                 pageDescription="Interests, hobbies, tutorials, coding and more"
             />

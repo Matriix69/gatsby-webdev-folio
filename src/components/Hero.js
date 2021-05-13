@@ -1,7 +1,7 @@
 import React from 'react'
 import Particles from "react-tsparticles";
 
-import {particlesOptions} from '../constants/constants' 
+import {particlesOptions1} from '../constants/particles' 
 
 
 export default function hero({title, description, image}) {
@@ -9,7 +9,7 @@ export default function hero({title, description, image}) {
         <section className={"hero_pages"}>
             <Particles
                 id="tsparticles"
-                options={particlesOptions}
+                options={particlesOptions1}
             />
             {image}
 

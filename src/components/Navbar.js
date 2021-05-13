@@ -1,10 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import {navLink, navLinkMobile} from '../constants/constants'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import { RiMoonFill } from 'react-icons/ri';
 import { BiBrightness } from 'react-icons/bi';
+import Logo from '../assets/isaac-chukwuka-logo.svg'
 
 
 
@@ -21,23 +21,31 @@ export default function Navbar() {
     `)
 
 
-    const [show, setShow] = useState(false)
+    const [scroll, setScroll] = useState(false)
 
-    const showNav = () => {
-        setShow(!show)
-    }
+    useEffect(() => {    
+
+        const handleScroll = () => {
+            if (window.scrollY >= 150) {
+              setScroll(true)
+            }else{
+                setScroll(false)
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const {title} = data.site.siteMetadata
     return (
-        <header>
+        <header className={ scroll ? "nav-scroll" : ""}>
             <div className="wrap">
-
+                
                 <h1 className="nav-title">
-                    <StaticImage 
-                        className="" 
-                        loading="eager"  
-                        src="../images/isaac-logo.png" alt="isaac-logo" 
-                    />
+                    <Logo/>
                     <Link to="/">
                         {title}
                     </Link>
@@ -65,23 +73,14 @@ export default function Navbar() {
                     )}
                 </ThemeToggler>
 
-                <span 
-                    tabIndex={0} 
-                    role="button" 
-                    aria-label="toggle nav menu" 
-                    onKeyDown={showNav} 
-                    onClick={showNav} 
-                    className={show ? "burger" : ''}
-                ></span>
 
                 <nav>                    
-                    <div className={"links" + (show ? " showNav" : '')}>
+                    <div className={"links"}>
                         {navLink.map((navLink, idx) => (
                             <Link 
                                 to={navLink.path} 
                                 key={idx}
                                 activeClassName="active"
-                                onClick={showNav} 
                             >
                             {navLink.title}
                             </Link>

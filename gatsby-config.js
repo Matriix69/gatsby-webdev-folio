@@ -39,8 +39,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "imatrix",
-        short_name: "imatrix",
+        name: "Isaac Chukwuka",
+        short_name: "Isaac Chukwuka",
         start_url: "/",
         background_color: "#0d1117",
         theme_color: "#c9d1d9",
@@ -55,16 +55,24 @@ module.exports = {
         precachePages: [`/about/`, `/contact/*`],
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    }
   ],
   siteMetadata: {
-    title: 'iMatrix.dev',
+    title: 'Isaac Chukwuka',
     description: "Full-Stack Web Developer | matrix | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws",
-    contact: 'hello@imatrix.dev',
-    url: 'https://matrix-28893.web.app',
-    image: `https://matrix-28893.web.app/isaac-logo.png`,
+    contact: 'chukwuka1158@gmail.com',
+    url: 'https://isaacchukwuka.com/',
+    image: `https://isaacchukwuka.com/isaac-logo.png`,
     twitterUSername:'@mvtrixx',
     fbAppID:'',
-    author: 'matrix',
+    author: 'isaac chukwuka',
     keywords: `software development, JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws`,
   }
 }

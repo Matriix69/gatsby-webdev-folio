@@ -2,27 +2,26 @@ import React from "react"
 
 //gatsby component import
 import { graphql, Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image"
 
 //contants file
-import {particlesOptions, Info} from '../constants/constants'
+import { Info} from '../constants/constants'
 
 //styles
 import '../styles/global.scss'
 import * as styles from '../styles/home.module.scss'
 
 //paticles and typewritter effect
-import Particles from "react-tsparticles";
 import Typewriter from 'typewriter-effect';
 
 //iocns
-import { BiCodeAlt  } from 'react-icons/bi';
+import { BsCode  } from 'react-icons/bs';
 import { FaReact, FaNodeJs  } from 'react-icons/fa';
 import { IoLogoFirebase  } from 'react-icons/io5';
 
 //my components
 import Seo from '../components/Seo'
 import Projects from '../components/Projects'
+import Svg from '../assets/isaac.svg'
 
 
 const typingSpeed = 10;
@@ -30,59 +29,50 @@ const deleteSpeed = 1;
 
 
 export default function Home({data}) {
-
-  function particlesLoaded(container) {
-    console.log(container);
-  }
+  
   const projects = data.projects.nodes
 
   return (
     <>
 
       <Seo
-        pageTitle="iMatrix | Full-Stack Web Developer | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws"
+        pageTitle="Isaac Chukwuka | Full-Stack Web Developer | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws"
       />
 
-      <section className={styles.hero}>
+      <section className={styles.home}>
+        <div className={styles.listing}>
+          <div className={styles.type_container}>
+            <div className={styles.type_flow}>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .changeDelay(typingSpeed)
+                    .changeDeleteSpeed(deleteSpeed)
+                    .typeString(Info.header1)
+                    .pauseFor(600)
+                    .typeString(Info.subHeader1)
+                    .start();
+                }}
+              />
+            </div>
+            
+          </div>
 
-        <Particles
-          id="tsparticles"
-          options={particlesOptions}
-          loaded={particlesLoaded}
-        />
-        
-        <StaticImage 
-          className="hero__image" 
-          loading="eager"  
-          src="../images/home.jpg" alt="home hero" 
-        />
-
-        <div className="hero__overlay"></div>
-
-        <div className={'wrap wrap_padding mainpage'}>
-          <div className={styles.typeEffect}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .changeDelay(typingSpeed)
-                  .changeDeleteSpeed(deleteSpeed)
-                  .typeString(Info.header1)
-                  .pauseFor(600)
-                  .typeString(Info.subHeader1)
-                  .start();
-              }}
-            />
+          <div>
+              <Svg/>
           </div>
         </div>
-
+          
       </section>
+
+
       
       <section className="listing" >
         <div className="wrap">
 
           <div className="info-list" >
               <div className="info-list-icon" >
-                  <BiCodeAlt/>
+                  <BsCode/>
               </div> 
               <div className="info-list-paragraph">
                   <p >

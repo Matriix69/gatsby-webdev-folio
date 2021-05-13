@@ -23,7 +23,7 @@ export default function Footer() {
             <div  className="wrap">
                 <div className="logo-email">
                     <h2>Isaac chukwuka</h2>
-                    <a href={`mailto:${contact}`}><p>{contact}</p></a>
+                    <a href={`mailto:${contact}`}><p>hello@isaacchukwuka.com</p></a>
                     <div className="headerSocial">
                         <ul className="socials">
                             {socialLinks.map((socialLinks, idx) => (
@@ -38,7 +38,7 @@ export default function Footer() {
                 </div>
 
                 <div className="copyright">
-                    <p >Made with <g-emoji class="g-emoji" alias="heart" >❤</g-emoji> by matrix © 2021</p>
+                    <p >Made with <g-emoji class="g-emoji" alias="heart" >❤</g-emoji> by Isaac Chukwuka © 2021</p>
                     <p>Created with&nbsp;<RiGatsbyLine style={{color: '#ad5cff'}}/></p>
 
                     <hr/>

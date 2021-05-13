@@ -11,19 +11,23 @@
   }
   h6 {
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 1rem;
+    font-weight: normal;
   }
   p {
     margin-top: 15px;
   }
+  p:last-of-type{
+    margin-top: 2rem;
+  }
   a:first-of-type{
-      padding: 15px 25px;
-      font-size: 17px;
+      padding: 8px 14px;
       border: 2px solid var(--accent);
       border-radius: .5rem;
       color: var(--accent);
       cursor: pointer;
       font-weight: 600;
+      outline: none;
       background: transparent;
       transition: all .3s ease;
 
@@ -34,7 +38,7 @@
   }
   a:last-of-type{
     display: inline-block;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--accent) ;
     margin-left: 5px;
     transition: all .3s ease;
@@ -98,20 +102,4 @@
   .show {
 	opacity: 1 !important;
   }
-
-.details h2 {
-  font-size: 3.5em;
-  margin-top: 80px;
-}
-.details h3 {
-  font-size: 2em;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-.html {
-  margin-top: 40px;
-}
-.featured {
-  margin-bottom: 40px;
-}
 

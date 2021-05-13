@@ -22,6 +22,7 @@ export default function Contact() {
 
     const onSubmit = async (values, form) => {
         let tempParams = {
+            name: values.name,
             email: values.email,
             subject: values.subject,
             message: values.message
@@ -43,7 +44,7 @@ export default function Contact() {
     return (
         <>
             <Seo 
-                pageTitle="iMatrix | Full-Stack Web Developer | Contact"
+                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | Contact"
                 pageUrl="contact"
             />
             <Hero
