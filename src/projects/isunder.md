@@ -2,10 +2,9 @@
 title: Isunder Technology
 stack: Html, Css, Vanilla  javascript
 slug: Isunder-Technology
-description: A simple one page but beautiful website with dark mode for isunder Tech, an eletric car company.
+description: A simple one-page but a beautiful website with dark mode for isunder Tech, an electric car company.
 date: 2021-01-01T00:00:00+00:00
 thumb: ../images/thumbs/isunder.png
-featuredImg: ../images/featured/isunder.png
 carousel1: ../images/thumbs/isunder1.png
 carousel2: ../images/thumbs/isunder2.png
 carousel3: ../images/thumbs/isunder3.png

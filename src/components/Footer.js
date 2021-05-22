@@ -1,7 +1,7 @@
 import React from 'react'
 import {socialLinks} from '../constants/constants'
 import { graphql, useStaticQuery} from "gatsby";
-import { RiGatsbyLine } from 'react-icons/ri';
+import Gatsby from '../assets/gatsby.svg'
 
 
 
@@ -22,7 +22,7 @@ export default function Footer() {
         <footer>
             <div  className="wrap">
                 <div className="logo-email">
-                    <h2>Isaac chukwuka</h2>
+                    <h1>Isaac chukwuka</h1>
                     <a href={`mailto:${contact}`}><p>hello@isaacchukwuka.com</p></a>
                     <div className="headerSocial">
                         <ul className="socials">
@@ -39,7 +39,7 @@ export default function Footer() {
 
                 <div className="copyright">
                     <p >Made with <g-emoji class="g-emoji" alias="heart" >❤</g-emoji> by Isaac Chukwuka © 2021</p>
-                    <p>Created with&nbsp;<RiGatsbyLine style={{color: '#ad5cff'}}/></p>
+                    <p>Created with&nbsp;<Gatsby style={{height: '20px', width: 'auto' }}/></p>
 
                     <hr/>
 

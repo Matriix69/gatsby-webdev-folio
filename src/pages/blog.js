@@ -1,31 +1,18 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import { StaticImage } from "gatsby-plugin-image"
-import * as styles from '../styles/contact.module.scss'
+import * as styles from '../styles/blog.module.scss'
 import Seo from '../components/Seo'
 
 export default function blog() {
     return (
         <>
             <Seo 
-                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | Blog"
+                pageTitle="Web Development Blog | Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws"
                 pageUrl="blog"
-                pageDescription="Interests, hobbies, tutorials, coding and more"
+                pageDescription="Web Development Blog by Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws, Interests, hobbies, tutorials and more"
             />
-            <Hero
-                title={"What's on my mind"}
-                description={"Interests, hobbies, tutorials, coding and more."}
-                image={
-                    <StaticImage 
-                        className="hero__image" 
-                        loading="eager"  
-                        src="../images/blogHeader.jpg" alt="blog Header" 
-                    />
-                }
-            />
-            <section className='wrap wrapper'>
+            <section>
                 <div className={styles.content}>
-                    <h2 id="changelog-10">Post 1.0</h2>
+                    <h2>Post 1.0</h2>
                     <p>nothing here yet </p>
                     <p>stay around for when i make a new post!</p>
                 </div>

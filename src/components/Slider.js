@@ -49,7 +49,7 @@ export default function ProjectDetails({slides, title}) {
                 <div className={styles.slideshowSlider} {...handlers}>
                     {slides.map((slides, idx) => (
                         <div className={styles.slide  + " " + (idx === index ? styles.show : null)}  key={idx}>
-                            <GatsbyImage  image={slides.img} alt={title}/>
+                            <GatsbyImage className={styles.img}  image={slides.img} alt={title}/>
                         </div>
                     ))}
                 </div>

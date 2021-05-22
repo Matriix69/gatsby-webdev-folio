@@ -14,7 +14,7 @@ import * as styles from '../styles/home.module.scss'
 import Typewriter from 'typewriter-effect';
 
 //iocns
-import { BsCode  } from 'react-icons/bs';
+import { BsCodeSlash  } from 'react-icons/bs';
 import { FaReact, FaNodeJs  } from 'react-icons/fa';
 import { IoLogoFirebase  } from 'react-icons/io5';
 
@@ -67,16 +67,16 @@ export default function Home({data}) {
 
 
       
-      <section className="listing" >
+      <div className="listing" >
         <div className="wrap">
 
           <div className="info-list" >
               <div className="info-list-icon" >
-                  <BsCode/>
+                  <BsCodeSlash/>
               </div> 
               <div className="info-list-paragraph">
                   <p >
-                      I am a <strong>full-stack developer</strong> /
+                      I am a <strong>full-stack web developer</strong> /
                       <strong> Content creator</strong> based in Nigeria, right in the
                       heart of Africa. I can do remote work for any place in the world.
                   </p> 
@@ -126,14 +126,16 @@ export default function Home({data}) {
 
           <hr />
               
-          <h1 className="post-heading">My recent Works</h1>
-
-          {projects.map((projects, index) => {
-              return <Projects projects={projects} key={index} />       
-          })} 
+          <h1 className="post-heading">My recent Works <BsCodeSlash/></h1>
+          
+          <section className="works">
+            {projects.map((projects, index) => {
+                return <Projects projects={projects} key={index} />       
+            })} 
+          </section>
 
         </div>
-      </section>
+      </div>
     </>
   )
 }

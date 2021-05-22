@@ -38,7 +38,6 @@
     "react-icons": "^4.2.0",
     "react-particles-js": "^3.4.1",
     "react-swipeable": "^6.1.0",
-    "react-tsparticles": "^1.26.4",
     "sass": "^1.32.11",
     "typewriter-effect": "^2.17.0"
   },

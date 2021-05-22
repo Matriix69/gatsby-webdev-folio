@@ -1,33 +1,21 @@
-.hero{
-    position: relative;
-    padding: 120px 0 200px;
-    color: var(--hero-text-color);
 
-    @media screen and (max-width: 700px) {
-        padding: 80px 0 180px;
-    }
-
-    h1{
-        font-size: 28px;
-        z-index: 22;
-        font-weight: 400;
-
-        @media screen and (min-width: 700px) {
-          font-size: 2.5rem
-        }
-    }
-
-    .subheader{
-        font-size: 18px;
-        line-height: 1.6;
-        color: rgba(255,255,255,0.8);
-        margin-top: 10px;
-    }
-}
 .home{
     display: flex;
     flex-direction: column;
     color: var(--text-color);
+
+    h1{
+        font-size: 2rem;
+        z-index: 22;
+        font-weight: 600;
+        color: var(--default-color);
+        
+    }
+    p{
+        font-size: var(--font-size-lg);
+        font-weight: 600;
+        color: var(--default-color);
+    }
 
     .listing{
         position: relative;
@@ -56,23 +44,6 @@
         }
 
     }
-
-    
-
-    
-
-}
-
-.typeEffect{
-    position: absolute;
-    left: 0; 
-  right: 0; 
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto; 
-  margin-right: auto; 
 }
 
 @media only screen and (max-width: 1080px){

@@ -60,7 +60,7 @@ export const navLinkMobile = [
 export const socialLinks = [
   {
     title: "Twitter",
-    link: 'https://twitter.com/Mvtrixx',
+    link: 'https://twitter.com/isaacchukwuka_',
     icon: <FaTwitter style={style}/>
   },
   {

@@ -1,11 +1,10 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 
 export default function NotFound() {
     return (
-        <Layout>
+        <>
             <Seo 
                 pageTitle="Page not found"
             />
@@ -22,6 +21,6 @@ export default function NotFound() {
                     </Link>
                 </p>
             </div>
-        </Layout>
+        </>
     )
 }

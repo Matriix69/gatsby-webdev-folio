@@ -66,13 +66,13 @@ module.exports = {
   ],
   siteMetadata: {
     title: 'Isaac Chukwuka',
-    description: "Full-Stack Web Developer | matrix | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws",
+    description: "Full-Stack Web Developer | Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Express.js Firebase, Aws and more",
     contact: 'chukwuka1158@gmail.com',
     url: 'https://isaacchukwuka.com/',
     image: `https://isaacchukwuka.com/isaac-logo.png`,
-    twitterUSername:'@mvtrixx',
+    twitterUSername:'@isaacchukwuka_',
     fbAppID:'',
     author: 'isaac chukwuka',
-    keywords: `software development, JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws`,
+    keywords: `software development, JavaScript, React.js, Gatsby.js, Node.js, Web, UI, Firebase, Aws`,
   }
 }
