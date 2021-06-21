@@ -57,6 +57,9 @@ body {
 	--accent: #4347ba;
 	--default-color: #24292e;
 	--post-bg: #fafafa;
+	--gray3: #6c7983;
+	--gray2: #b2becd;
+	--h-color: #000;
 }
 .dark{
 	--bg-color: #0d1117;
@@ -83,6 +86,10 @@ body {
 	--accent: #00c58e;
 	--default-color: #f0f6fc;
 	--post-bg: #161b22;
+
+	--gray3: #454e56;
+	--gray2: #6c7983;
+	--h-color: #fff;
 }
 
 
@@ -103,6 +110,13 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-color);
     border: 3px solid var(--bg-color);
     border-radius: 10px;
+
+	&:hover{
+		background-color: #515861;
+	}
+	&:active{
+		background-color: var(--accent);
+	}
 }
 
 // general p and hr style
@@ -165,6 +179,15 @@ layout & nav
 .skin{
 	fill: #f7c4a7 !important;
 }
+.fa-secondary{
+	transition: all .3s ease;
+	fill: var(--gray3) !important;
+}
+.fa-primary{
+	transition: all .3s ease;
+	fill: var(--gray2) !important;
+}
+
 
 // add shadow on navbar scroll
 .nav-scroll{
@@ -196,10 +219,10 @@ header{
 				position: relative;
 				transition: all .3s ease;
 
-				background: var(--bg-color);
+				background: var(--bg-alt-color);
 				height: 40px;
-				width: 170px;
-				min-width: 230px;
+				width: 240px;
+				min-width: 240px;
 				border-radius: 25px;
 
 				svg {
@@ -228,8 +251,8 @@ header{
 					color: #f6ad55;
 					transition: color .5s ease;
 
-					&:hover{
-						color: var(--svg-hover) ;
+					&:hover .fa-secondary{
+						fill: var(--h-color) !important ;
 					}
 				}
 			}
@@ -305,13 +328,13 @@ nav {
 			height: 5rem;
 			font-size: var(--font-size-sm);
 			font-family: $font-stack;
-			background-color: var(--bg-alt-color);
-			box-shadow: 0px -4px 5px rgb(0 0 0 / 8%); 
+			background-color: var(--post-bg);
+			box-shadow: 0px -10px 10px rgb(0 0 0 / 10%); 
 
 		}
 		a{
-			flex-direction: column;
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			text-align: center;
 			color: var(--default-color);
@@ -320,8 +343,11 @@ nav {
 			opacity: .7;
 
 			svg{
-				display: inline-block;
-				margin: 0 auto;
+				
+				width: 1.3em;
+    			height: 1.3em;
+				align-self: center;
+				margin-bottom: 2px;
 			}
 		}
 		
@@ -339,6 +365,11 @@ nav {
 .active-links-bottom{
 	opacity: 1 !important;
 	color: var(--accent) !important;
+	svg{
+		.fa-secondary{
+			fill: var(--h-color) !important ;
+		}
+	}
 }
 
 
@@ -447,11 +478,7 @@ project section
 article{
 
 	margin: 1rem;
-
-	// &:last-of-type {
-	// 	margin-bottom: 40px;
-	// }
-
+	
 	.post {
 		display: flex;
 		flex-direction: column;
@@ -554,8 +581,11 @@ intro list
 		text-align: center;
 		width: 16.666667%;
 		svg{
+			// width: 1.25em;
+			// height: 1em;
 			transition: color .3s ease;
 			font-size: var(--font-size-xl);
+			
 		}
 	}
 
@@ -607,11 +637,31 @@ button style on contact & about
 		outline: none;
 		background: transparent;
 		transition: all .3s ease;
+		position: relative;
+		.spinner{
+			position: absolute;
+			right: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50%;
+			border: 2px solid var(--accent);
+			border-right: 2px solid transparent;
+			animation: spin 0.5s linear infinite;
+			transition: all .3s ease;
+		}
+		@keyframes spin {
+			to {transform: rotate(360deg)}
+		}
 
-		&:hover{
+		&:hover, &:hover .spinner{
 			color: #fff;
 			background: var(--accent);
 		}
+		&:hover .spinner{
+			border: 2px solid #fff;
+			border-right: 2px solid transparent;
+		}
+		
 	}
 	
 }
@@ -621,28 +671,41 @@ footer section
 ***********************************/
 footer {
 
-    padding: 30px 45px;
+    padding: 20px;
     margin-top: 50px;
 	background-color: var(--bg-alt-color);
 	transition: all .3s ease;
 	font-size: var(--font-size-sm);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 
 	@media screen and (max-width: 700px){
 		display: none;
 	}
 	
 	.wrap{
-		display: flex;
-    	justify-content: space-between;
-
+		width: 100%;
 		.copyright {
-			text-align: right;
+			width: 100%;
+			text-align: center;
 			color: var(--text-color);
-			p:nth-child(2){
+			hr{
+				margin: 0 auto;
+			}
+			p:nth-child(1){
 				display: flex;
 				align-items: center	;
-				justify-content: flex-end;
-				text-align: right;
+				justify-content: center;
+			}
+			a{
+				display: flex;
+				align-items: center	;
+				position:absolute;
+				right: 0;
+				bottom: 0;
+				color: var(--text-color);
 
 				b{
 					opacity: 0.7;
@@ -670,15 +733,6 @@ footer {
 			a{
 				color: var(--text-color);
 			}
-			.headerSocial .socials{
-				justify-content: start;
-			}
-			@media screen and (max-width: 834px){
-				margin-bottom: 50px;
-			}
-		}
-		@media screen and (max-width: 834px){
-			flex-direction: column;
 		}
 	}
 }
@@ -688,47 +742,42 @@ socail links on hero and footer
 ***********************************/
 
 .headerSocial {
-    display: block;
+    display: flex;
+	justify-content: center;
+	flex-flow: wrap;
     position: relative;
     z-index: 2 !important;
     cursor: pointer;
 	transition: all .3s ease;
 	-webkit-tap-highlight-color: transparent;
-    .socials {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-top: 25px;
-        display: flex;
-        align-items: center;
-        align-self: center;
-        justify-content: center;
-		transition: all .3s ease;
+	color: var(--text-color);
+    
+		
+	a{
+		position: relative;
+		color: var(--text-color) !important;
+		transition: all .3s ease-in;
+		font-size: 2rem;
+		margin-top: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    }
-    .socials__item {
-        position: relative;
-        margin-left: 5px;
-        width: 50px;
-        height: 50px;
-        border-radius: 100%;
-        background: var(--links-icon);
-        line-height: 1;
-        transition: all .3s ease-in;
+		svg{
+			color: var(--text-color);
+			font-size: 2rem;
+			&:hover{
+				color: var(--accent) !important;
+			}
+		}
 
-        display: flex;
-        align-items: center;
-        align-self: center;
-        justify-content: center;
-
-        &:hover{
-			transform: translateY(-5px);
-        }
-        
-    }
-    .socials__item:first-child {
-        margin-left: 0;
-    }
+		&:not(:last-of-type){
+			margin-right: 8px;
+		}
+		&:hover{
+			transform: translateY(-10px);
+		}
+	}
 }
 
 

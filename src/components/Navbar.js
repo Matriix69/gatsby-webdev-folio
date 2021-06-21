@@ -2,9 +2,10 @@ import React,{useState, useEffect} from 'react'
 import {navLink, navLinkMobile} from '../constants/constants'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
-import { RiMoonFill } from 'react-icons/ri';
-import { BiBrightness } from 'react-icons/bi';
 import Logo from '../assets/isaac-chukwuka-logo.svg'
+import Sun from '../assets/sun.svg'
+import Moon from '../assets/moon.svg'
+
 
 
 
@@ -68,7 +69,7 @@ export default function Navbar() {
                                 toggleTheme(nextTheme)
                             }}
                         >
-                            {theme === "light" ? <RiMoonFill/> : <BiBrightness/>}   
+                            {theme === "light" ? <Moon/> : <Sun/>}   
                         </i>
                     )}
                 </ThemeToggler>

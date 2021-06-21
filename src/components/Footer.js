@@ -1,8 +1,9 @@
 import React from 'react'
 import {socialLinks} from '../constants/constants'
 import { graphql, useStaticQuery} from "gatsby";
-import Gatsby from '../assets/gatsby.svg'
 
+import { FaCode  } from 'react-icons/fa';
+import { RiGatsbyLine  } from 'react-icons/ri';
 
 
 export default function Footer() {
@@ -22,24 +23,18 @@ export default function Footer() {
         <footer>
             <div  className="wrap">
                 <div className="logo-email">
-                    <h1>Isaac chukwuka</h1>
-                    <a href={`mailto:${contact}`}><p>hello@isaacchukwuka.com</p></a>
                     <div className="headerSocial">
-                        <ul className="socials">
-                            {socialLinks.map((socialLinks, idx) => (
-                                <li className={"socials__item"} key={idx}>
-                                    <a href={socialLinks.link} target="_blank" rel="noreferrer">
-                                        {socialLinks.icon}
-                                    </a>   
-                                </li>
-                            ))}
-                        </ul>
+                        {socialLinks.map((socialLinks, idx) => (
+                            <a href={socialLinks.link} key={idx} target="_blank" rel="noreferrer">
+                                {socialLinks.icon}
+                            </a>
+                        ))}
                     </div>
                 </div>
 
                 <div className="copyright">
-                    <p >Made with <g-emoji class="g-emoji" alias="heart" >❤</g-emoji> by Isaac Chukwuka © 2021</p>
-                    <p>Created with&nbsp;<Gatsby style={{height: '20px', width: 'auto' }}/></p>
+                    <p ><FaCode/> &nbsp; with &nbsp;<g-emoji class="g-emoji" alias="heart" >❤</g-emoji> &nbsp; by Isaac Chukwuka © 2021</p>
+                    <a href="https://www.gatsbyjs.com/" target="_blank" rel="noreferrer">Created with&nbsp;<RiGatsbyLine style={{height: '18px', width: 'auto' }}/></a>
 
                     <hr/>
 

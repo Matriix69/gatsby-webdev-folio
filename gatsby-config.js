@@ -6,6 +6,10 @@
 
 module.exports = {
   /* Your site config here */
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PRESERVE_WEBPACK_CACHE: true
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,

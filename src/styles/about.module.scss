@@ -26,11 +26,11 @@
     }
 }
 .about_img{
-    display: flex;
-    flex-flow: column;
-
-    @media (min-width: 768px) {
-        flex-direction: row;
+    margin-top: 2rem;
+    @media (max-width: 768px) {
+        display: flex;
+        flex-flow: column; 
+        margin-top: 0;  
     }
 
     .about_img_container{
@@ -41,39 +41,45 @@
             }
 
         .img{
+            shape-outside: circle(50%);
+            float: left;
             width: 192px;
             height: 192px;
             border-radius: 50%;
-            margin: 4rem 0 2rem 0;
+            margin: 2rem;
+            // margin-left: 0;
 
-            @media (min-width: 768px) {
-                margin: 2rem 3rem 1rem 0;
+            @media (max-width: 768px) {
+                clear: both;
+                margin: 4rem 0 2rem 0;
+                shape-outside: none;
             }
             
         }
     
     }
     
-    .about_context{
+  
         
-        .about_hello{
-            display: flex;
-            align-items: center;
-            margin-top: 2rem;
-            svg{
-
-                width: 36px;
-                color: var(--default-color);
-            }
-            h1{
-                font-size: var(--font-size-xlg);
-                font-weight: 600;
-                margin: 0;
-                margin-right: 15px;
-            }
+    .about_hello{
+        
+        align-items: center;
+        svg{
+            display: inline-block;
+            width: 36px;
+            height: auto;
+            color: var(--default-color);
+        }
+        h1{
+            display: inline-block;
+            font-size: var(--font-size-xlg);
+            font-weight: 600;
+            margin: 0;
+            margin-right: 10px;
         }
     }
 }
+
 
 .heading{
     color: var(--default-color);
@@ -105,12 +111,18 @@
         background-color: #fafafa;
         margin: 16px;
         border-radius: .5rem;
+        transition: all .3s ease-in-out;
+        filter: grayscale(0);
+        &:hover{
+            filter: grayscale(100%);
+        }
         svg{
             display: inline-block;
             height: 64px;
             width: auto;
             max-width: 8rem;
             margin: 16px;
+            
         }
     }
 }

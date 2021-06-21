@@ -4,10 +4,10 @@ import * as styles from '../styles/about.module.scss'
 import Seo from '../components/Seo'
 
 import { FaUserTie, FaTools } from 'react-icons/fa';
-import { RiMovie2Line } from 'react-icons/ri';
 import { BiMicrochip, BiCodeAlt  } from 'react-icons/bi';
 import { IoBarbellOutline  } from 'react-icons/io5';
-import { CgGames  } from 'react-icons/cg';
+import { CgGames,CgLaptop  } from 'react-icons/cg';
+import { AiOutlineSmile  } from 'react-icons/ai';
 
 import Robo from '../assets/robot.svg'
 import Javascript2 from '../assets/javaScript.svg'
@@ -47,32 +47,29 @@ export default function About() {
                             />
                         </div>
 
-                        <div className={styles.about_context}>
-                            <div className={styles.about_hello} >
-                                <h1 >Hello </h1>
-                                <Robo className={styles.bounce}/>
-                            </div>
-                            
-                            <p>
-                                Hi, <strong>I'm Isaac Chukwuka (aka Matrix)</strong>, I'm a <strong>self-taught Fullstack developer</strong> 💻, single, 20-something-year-old, with a strong educational background in <strong>Computer engineering</strong>. 
-                                I do freelance work <span role="img" aria-label="smile-emoji"> 🚀 </span> based in Nigeria, but I do work remotely for international clients.
-                            </p>
+                        <div className={styles.about_hello} >
+                            <h1 >Hello </h1>
+                            <Robo className={styles.bounce}/>
                         </div>
+                        
+                        <p>
+                            Hi, <strong>I'm Isaac Chukwuka (aka Matrix)</strong>, I'm a <strong>self-taught Fullstack developer</strong> 💻, single, 20-something-year-old, with a strong educational background in <strong>Computer engineering</strong>. 
+                            I do freelance work <span role="img" aria-label="smile-emoji"> 🚀 </span> based in Nigeria, but I do work remotely for international clients.
+                        </p>
 
+                        <p>
+                            I started a noob coder, moving onto 
+                            Front-End Website development. Through the years I trained myself in <strong>Html, CSS </strong> and <strong>Javascript</strong> and 
+                            moved onto <strong>NodeJS</strong> as a <strong>Fullstack developer.</strong>
+                        </p>
+
+                        <p>
+                            Fast-forward to today, and I've had the privilege to make design and develop nice responsive 
+                            web app for a few start-up companies. My main focus these days is building accessible, inclusive 
+                            products and digital experiences for a variety of clients, and keep developing myself! the 
+                            learning never stops.<span role="img" aria-label="smile-emoji">🙂</span>
+                        </p>
                     </div>
-
-                    <p>
-                        I started a noob coder, moving onto 
-                        Front-End Website development. Through the years I trained myself in <strong>Html, CSS </strong> and <strong>Javascript</strong> and 
-                        moved onto <strong>NodeJS</strong> as a <strong>Fullstack developer.</strong>
-                    </p>
-
-                    <p>
-                        Fast-forward to today, and I've had the privilege to make design and develop nice responsive 
-                        web app for a few start-up companies. My main focus these days is building accessible, inclusive 
-                        products and digital experiences for a variety of clients, and keep developing myself! the 
-                        learning never stops.<span role="img" aria-label="smile-emoji">🙂</span>
-                    </p>
 
                     <hr/>
 
@@ -123,7 +120,7 @@ export default function About() {
 
                     <hr/>
                     
-                    <h2 className={styles.heading}>Interests 1.0</h2>
+                    <h2 className={styles.heading}>Interests 1.0 <AiOutlineSmile/></h2>
 
                     <h2 className={styles.heading}>Job <FaUserTie/></h2>
                     <p>
@@ -155,7 +152,7 @@ export default function About() {
                         <em> never forget to compare yourself only against yourself</em>
                     </p>
 
-                    <h2 className={styles.heading}>Favorite Movies <RiMovie2Line/></h2>
+                    <h2 className={styles.heading}>Favorite Movies <CgLaptop/></h2>
                     <p >
                         I love almost any kind of movie, but I'm more of an animation person, 
                         I find them entertaining and very easy to watch, some of my favorites 

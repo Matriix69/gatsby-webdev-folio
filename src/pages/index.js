@@ -14,8 +14,7 @@ import * as styles from '../styles/home.module.scss'
 import Typewriter from 'typewriter-effect';
 
 //iocns
-import { BsCodeSlash  } from 'react-icons/bs';
-import { FaReact, FaNodeJs  } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaCode  } from 'react-icons/fa';
 import { IoLogoFirebase  } from 'react-icons/io5';
 
 //my components
@@ -72,13 +71,13 @@ export default function Home({data}) {
 
           <div className="info-list" >
               <div className="info-list-icon" >
-                  <BsCodeSlash/>
+                  <FaCode/>
               </div> 
               <div className="info-list-paragraph">
                   <p >
                       I am a <strong>full-stack web developer</strong> /
                       <strong> Content creator</strong> based in Nigeria, right in the
-                      heart of Africa. I can do remote work for any place in the world.
+                      heart of Africa. I freelance and do remote jobs for any place in the world.
                   </p> 
                   <Link to="/contact" >
                       Set up a meeting
@@ -92,7 +91,7 @@ export default function Home({data}) {
               </div> 
               <div className="info-list-paragraph">
                   <p >
-                      For <em>frontend</em> work, I am personally a huge fan of
+                      For <em>frontend</em> design, I'm personally a huge fan of
                       <b>  React.js</b> and it's ecosystem
                       (e.g. <b> Gatsby.js & Next.js</b>).
                   </p> 
@@ -105,9 +104,8 @@ export default function Home({data}) {
               </div> 
               <div className="info-list-paragraph">
                   <p >
-                      For <em>backend</em> work, my go-to tool is <b>Node.js</b>. very efficient and overall developer productivity. 
+                      For <em>backend</em> work, my go-to tool is <b>Node.js</b>, very efficient and overall developer productive. 
                       I have also worked with PHP in the past
-
                   </p> 
               </div>
           </div>
@@ -118,7 +116,7 @@ export default function Home({data}) {
               </div> 
               <div className="info-list-paragraph">
                   <p >
-                    For my <em>serverless and cloud computing</em>, my go to tool is <b>Firebase</b>, 
+                    For my <em>serverless and cloud computing</em>, my go-to tool is <b>Firebase</b>, 
                     which is part of <b>Googles cloud platform</b> <em>(gcp)</em>, also <b>Amazon web services</b> <em>(aws)</em> as my alternative.
                   </p> 
               </div>
@@ -126,7 +124,7 @@ export default function Home({data}) {
 
           <hr />
               
-          <h1 className="post-heading">My recent Works <BsCodeSlash/></h1>
+          <h1 className="post-heading">My recent Works <FaCode/></h1>
           
           <section className="works">
             {projects.map((projects, index) => {

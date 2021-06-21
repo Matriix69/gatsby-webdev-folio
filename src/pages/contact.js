@@ -4,8 +4,7 @@ import { Form, Field } from 'react-final-form'
 import { BsCheckCircle, BsXCircle  } from 'react-icons/bs';
 import emailjs from 'emailjs-com';
 import Seo from '../components/Seo'
-import { socialLinks } from '../constants/constants'
-import Contact2 from '../assets/contact.svg'
+import { socialLinksContact } from '../constants/constants'
 
 export default function Contact() {
 
@@ -47,39 +46,39 @@ export default function Contact() {
             />
             <section>
                 <div className={styles.content}>
-                    <h1>Let's Talk <span role="img" aria-label="smile-emoji">😊</span></h1>
-                    <p>
-                        Whether you are interested to do business with me, want to chat about some of 
-                        my content, just want to hang out, <strong> 
-                        or Just a connection from one developer to developer</strong>.
-                        Feel free to reach out anytime, I got you!
-                    </p>
+                    <div className={styles.intro}>
+                        <h1>Let's Connect! <span role="img" aria-label="smile-emoji">😊</span></h1>
+                        <p>
+                            Please reach out for anything including, <strong>business, want to chat about some of 
+                            my content, just want to hang out, or Just a connection from one developer to 
+                            developer</strong>. Feel free to reach out anytime, I got you!
+                        </p>
+                    </div>
+                    
 
-                    <div className={styles.contact_wrapper}>
-                        <Contact2/>
-                        
-                        <div>
+                    <div className={styles.contact_wrapper}>      
                             
-                            <Form
-                                onSubmit={onSubmit}
-                                validate={values => {
-                                    const errors = {}
-                                    let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            
-                                    if (!values.name || (values.name && values.name.length < 2)) {
-                                    errors.name = 'Name is too short'
-                                    }
-                                    if (!values.email || (values.email && !regex.test(values.email))) {
-                                    errors.email = 'Invalid Email'
-                                    } 
-                                    if (!values.message || (values.message.length < 30)) {
-                                    errors.message = 'Please be elaborate'
-                                    } 
-                                    return errors
-                                }}
-                                render={({ handleSubmit, form, reset, submitting, pristine, values }) => (
-                                    <form onSubmit={handleSubmit}>
-                                        <div className={styles.form}>
+                        <Form
+                            onSubmit={onSubmit}
+                            validate={values => {
+                                const errors = {}
+                                let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
+                                if (!values.name || (values.name && values.name.length < 2)) {
+                                errors.name = 'Name is too short'
+                                }
+                                if (!values.email || (values.email && !regex.test(values.email))) {
+                                errors.email = 'Invalid Email'
+                                } 
+                                if (!values.message || (values.message.length < 30)) {
+                                errors.message = 'Please be more elaborate'
+                                } 
+                                return errors
+                            }}
+                            render={({ handleSubmit, form, reset, submitting, pristine, values }) => (
+                                <form onSubmit={handleSubmit}>
+                                    <div className={styles.form_input}>
+                                        <div className={styles.form_side}>
                                             <Field name="name">
                                                 {({ input, meta }) => (
                                                 <div className={styles.form_group}>
@@ -89,6 +88,8 @@ export default function Contact() {
                                                 </div>
                                                 )}
                                             </Field>
+                                        </div>
+                                        <div className={styles.form_side}>
                                             <Field name="email">
                                                 {({ input, meta }) => (
                                                 <div className={styles.form_group}>
@@ -98,25 +99,27 @@ export default function Contact() {
                                                 </div>
                                                 )}
                                             </Field>
-                                            <Field name="message">
-                                                {({ input, meta }) => (
-                                                <div className={styles.form_group}>
-                                                    <label htmlFor="email">Message *</label>
-                                                    <textarea {...input} type="password" placeholder="Include an optional message" />
-                                                    {meta.error && meta.touched && <span className={styles.errorText}>{meta.error}</span>}
-                                                </div>
-                                                )}
-                                            </Field>
-                                            <div className={"button_wrapper"}>
-                                                <button className="btn" type="submit" disabled={submitting}>
-                                                    {submitting ? 'Sending...' : 'Contact me'}
-                                                </button>
-                                            </div>
                                         </div>
-                                    </form>
-                                )}
-                            />
-                        </div>
+                                    </div>
+                                    <div className={styles.form_textarea}>
+                                        <Field name="message">
+                                            {({ input, meta }) => (
+                                            <div className={styles.form_group}>
+                                                <label htmlFor="email">Message *</label>
+                                                <textarea {...input} type="password" placeholder="Include an optional message" />
+                                                {meta.error && meta.touched && <span className={styles.errorText}>{meta.error}</span>}
+                                            </div>
+                                            )}
+                                        </Field>
+                                    </div>
+                                    <div className={"button_wrapper " + styles.button}>
+                                        <button className="btn" type="submit" disabled={submitting}>
+                                            {submitting ? <div style={{display:"flex", alignItems: "center", marginRight:"2rem"}}>Sending... <div className="spinner"></div></div> : 'Contact me'}
+                                        </button>
+                                    </div>
+                                </form>
+                            )}
+                        />
                     </div>
 
                     <p style={{textAlign: "center"}}>
@@ -124,15 +127,11 @@ export default function Contact() {
                     </p>
                     
                     <div className="headerSocial" style={{marginBottom:"20px"}}>
-                        <ul className="socials">
-                            {socialLinks.map((socialLinks, idx) => (
-                                <li className={"socials__item"} key={idx}>
-                                    <a href={socialLinks.link} target="_blank" rel="noreferrer">
-                                        {socialLinks.icon}
-                                    </a>   
-                                </li>
-                            ))}
-                        </ul>
+                        {socialLinksContact.map((socialLinks, idx) => (
+                            <a href={socialLinks.link} key={idx} target="_blank" rel="noreferrer">
+                                {socialLinks.icon}
+                            </a> 
+                        ))}
                     </div>
                 </div>
             </section>
