@@ -1,133 +1,172 @@
-.project_content{
-  background-color: var(--bg-color);
-  position: relative;
-  width:  100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding:0px 20px 0px 20px ;
-  transition: all .3s ease;
-
-  @media (min-width: 768px){
-      max-width: 768px;
-  }
-  @media (min-width: 1280px){
-      max-width: 1024px;
-  }
-  p{
-    margin-top: 15px;
+.project_content {
+    background-color: var(--bg-color);
     position: relative;
-  }
-  p:first-of-type::first-letter{
-    font-size: 140%;
-    font-weight: 600;
-    margin-right: 2px;
-  }
-  a:first-of-type{
-      padding: 8px 14px;
-      border: 2px solid var(--accent);
-      border-radius: .5rem;
-      color: var(--accent);
-      cursor: pointer;
-      font-weight: 600;
-      outline: none;
-      background: transparent;
-      transition: all .3s ease;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
+    transition: all 0.3s ease;
 
-      &:hover{
-        color: #fff;
-        background: var(--accent);
-      }
-  }
-  a:last-of-type{
-    display: inline-block;
-    font-weight: 600;
-    color: var(--accent) ;
-    margin-left: 5px;
-    transition: all .3s ease;
-    
-      &:hover{
-        transform: translateX(+5px);
+    @media (min-width: 768px) {
+        max-width: 768px;
     }
-  }
+    @media (min-width: 1280px) {
+        max-width: 1024px;
+    }
+    p {
+        margin-top: 15px;
+        position: relative;
+    }
+    p:first-of-type::first-letter {
+        font-size: 140%;
+        font-weight: 600;
+        margin-right: 2px;
+    }
 }
 
-.heading{
-  h1 {
-    font-size: 30px;
-    font-weight: 600;
+.project_actions {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 2rem;
-    margin-bottom: .5rem;
-    color: var(--default-color);
-  }
-  h6{
-    margin: 12px 0 !important;
-    font-size: var(--font-size-sm);
-    font-weight: 400;
-    line-height: 1.5;
-  }
+
+    // @media (max-width: 400px) {
+    //     flex-flow: column;
+    // }
+    @media screen and (max-width: 420px) {
+        justify-content: center;
+    }
+    .project_live {
+        display: flex;
+        align-items: center;
+        padding: 8px 14px;
+        border: 2px solid var(--accent);
+        border-radius: 0.5rem;
+        color: var(--accent);
+        cursor: pointer;
+        font-weight: 600;
+        outline: none;
+        background: transparent;
+        transition: all 0.3s ease;
+        line-height: 1;
+        justify-content: center;
+        width: 180px;
+        margin-right: 20px;
+        margin-top: 20px;
+
+        &:hover {
+            color: #fff;
+            background: var(--accent);
+        }
+        svg {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
+    .project_github {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        color: white;
+        // margin-left: 20px;
+        transition: all 0.3s ease;
+        background-color: var(--accent);
+        line-height: 1;
+        padding: 8px 14px;
+        border-radius: 0.5rem;
+        justify-content: center;
+        width: 180px;
+        margin-right: 20px;
+        margin-top: 20px;
+
+        &:hover {
+            transform: translateX(+5px);
+        }
+
+        svg {
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+        }
+    }
 }
 
+.heading {
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--default-color);
+    }
+    h6 {
+        margin: 12px 0 !important;
+        font-size: var(--font-size-sm);
+        font-weight: 400;
+        line-height: 1.5;
+    }
+}
 
 .slideshow {
-	width: 100%;
-	max-width: 800px;
-	text-align: center;
-	position: relative;
-	margin: 0 auto;
-  margin-bottom: 56%;
-	-webkit-tap-highlight-color: transparent;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 62%;
+    -webkit-tap-highlight-color: transparent;
 
-  @media (min-width: 1280px){
-    margin-bottom: 44%;
-  }
+    @media (min-width: 1280px) {
+        margin-bottom: 48%;
+    }
 
     .slideshowSlider {
-      position: relative;
-      -webkit-tap-highlight-color: transparent;
+        position: relative;
+        -webkit-tap-highlight-color: transparent;
 
-      .slide {
-        transition: all 0.9s ease-in;
-        position: absolute;
-        height: 400px;
-        width: 100%;
-        // border-radius: 40px;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        box-sizing: border-box;
-        // border-radius: .5rem;
+        .slide {
+            transition: all 0.9s ease-in;
+            position: absolute;
+            height: 400px;
+            width: 100%;
+            // border-radius: 40px;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            // border-radius: .5rem;
 
-        .img{
-          border-radius: .5rem;
-          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+            .img {
+                border-radius: 0.5rem;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%),
+                    0 2px 4px -1px rgb(0 0 0 / 6%);
+            }
         }
-      }
     }
-  }
-  
-  .slideshowDots {
+}
+
+.slideshowDots {
     position: relative;
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
-      .slideshowDot {
+    .slideshowDot {
         display: inline-block;
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
+        height: 4px;
+        width: 30px;
+        border-radius: 10px;
         cursor: pointer;
         margin: 15px 5px 0px;
-        background-color: #ABB7B7;
+        background-color: #abb7b7;
         transition: all 0.9s ease-in;
         -webkit-tap-highlight-color: transparent;
-      }
-  }
-  
-  .btnActive {
-	background-color: var(--accent) !important;
-  }
-  
-  .show {
-	opacity: 1 !important;
-  }
+    }
+}
 
+.btnActive {
+    background-color: var(--accent) !important;
+}
+
+.show {
+    opacity: 1 !important;
+}

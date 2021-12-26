@@ -1,33 +1,44 @@
-import React from 'react'
-import * as styles from '../styles/project-details.module.scss'
-import { graphql } from 'gatsby'
-import Seo from '../components/Seo'
-import Slide from '../components/Slider'
+import React from "react"
+import * as styles from "../styles/project-details.module.scss"
+import { graphql } from "gatsby"
+import Seo from "../components/Seo"
+import Slide from "../components/Slider"
+import { FaGithub } from "react-icons/fa"
+import { MdLiveTv } from "react-icons/md"
 
-export default function ProjectDetails({data}) {
-
+export default function ProjectDetails({ data }) {
     //destructure grahpql data
-    const {html} = data.markdownRemark
-    const {title, stack, slug, description, carousel1, carousel2, carousel3} = data.markdownRemark.frontmatter
-    
+    const { html } = data.markdownRemark
+    const {
+        title,
+        stack,
+        slug,
+        description,
+        carousel1,
+        carousel2,
+        carousel3,
+        url,
+        github,
+    } = data.markdownRemark.frontmatter
+
+    console.log(github)
+
     //images for slide show
     const slides = [
         {
-            img: carousel1.childImageSharp.gatsbyImageData
+            img: carousel1.childImageSharp.gatsbyImageData,
         },
         {
-            img: carousel2.childImageSharp.gatsbyImageData
+            img: carousel2.childImageSharp.gatsbyImageData,
         },
         {
-            img: carousel3.childImageSharp.gatsbyImageData
-        }
+            img: carousel3.childImageSharp.gatsbyImageData,
+        },
     ]
-
-    
 
     return (
         <>
-            <Seo 
+            <Seo
                 pageTitle={`${title} | ${data.site.siteMetadata.title}`}
                 pageUrl={`projects/${slug}`}
                 pageDescription={description}
@@ -38,11 +49,34 @@ export default function ProjectDetails({data}) {
                         <h1>{title}</h1>
                         <h6>{stack}</h6>
                     </div>
-                   
 
-                    <Slide slides={slides} title={title}/>
+                    <Slide slides={slides} title={title} />
 
-                    <div dangerouslySetInnerHTML={{__html: html}} />
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+
+                    <div className={styles.project_actions}>
+                        <a
+                            href={url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={styles.project_live}
+                        >
+                            <MdLiveTv />
+                            View Live
+                        </a>
+
+                        {github && github !== "none" ? (
+                            <a
+                                href={github}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={styles.project_github}
+                            >
+                                <FaGithub />
+                                View on github
+                            </a>
+                        ) : null}
+                    </div>
                 </div>
             </section>
         </>
@@ -51,13 +85,15 @@ export default function ProjectDetails({data}) {
 
 export const query = graphql`
     query Projectpage($slug: String) {
-        markdownRemark(frontmatter: {slug: {eq: $slug}}) {
+        markdownRemark(frontmatter: { slug: { eq: $slug } }) {
             html
             frontmatter {
                 stack
                 title
                 slug
                 description
+                url
+                github
                 carousel1 {
                     childImageSharp {
                         gatsbyImageData
