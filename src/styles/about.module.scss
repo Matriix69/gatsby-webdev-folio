@@ -30,38 +30,46 @@
 }
 .about_img {
     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
     @media (max-width: 768px) {
         display: flex;
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
         margin-top: 0;
     }
 
     .about_img_container {
-        @media (max-width: 768px) {
-            align-self: center;
-            margin: 0;
-        }
+        // @media (max-width: 768px) {
+        //     align-self: center;
+        //     margin: 0;
+        // }
 
         .img {
-            shape-outside: circle(50%);
-            float: left;
+            // shape-outside: circle(50%);
+            // float: left;
             width: 192px;
             height: 192px;
             border-radius: 50%;
-            margin: 3rem;
+            border-top-right-radius: 0;
+            // margin: 3rem;
             // margin-left: 0;
 
             @media (max-width: 768px) {
-                clear: both;
+                // clear: both;
                 margin: 4rem 0 2rem 0;
-                shape-outside: none;
+                // shape-outside: none;
             }
         }
     }
 
     .about_hello {
         align-items: center;
+        position: relative;
         svg {
+            position: absolute;
             display: inline-block;
             width: 36px;
             height: auto;
@@ -71,8 +79,10 @@
             display: inline-block;
             font-size: var(--font-size-xlg);
             font-weight: 600;
+            font-family: var(--condensed);
             margin: 0;
             margin-right: 10px;
+            line-height: 1;
         }
     }
 }
@@ -84,6 +94,8 @@
     align-items: center;
     margin-top: 2rem !important;
     margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: var(--condensed);
 
     &:not(:first-of-type) {
         margin-top: 32px;
@@ -160,7 +172,8 @@
 
     & > div {
         flex: 1 1 0%;
-
+        display: grid;
+        gap: 5px;
         span {
             color: var(--text-color);
             font-size: var(--font-size-sm);
@@ -168,15 +181,16 @@
             // line-height: 1.5;
         }
         h1 {
-            font-size: var(--font-size-lg);
+            font-size: var(--font-size-md);
             line-height: 1.5;
-            margin: 0.1rem 0 0.5rem;
+            margin: 0;
+            // margin: 0.1rem 0 0.5rem;
         }
         h2 {
-            font-size: var(--font-size-md);
+            font-size: var(--font-size-sm);
             margin: 0;
             line-height: 1.5;
-            font-weight: 600;
+            font-weight: 500;
             color: var(--text-color);
         }
     }

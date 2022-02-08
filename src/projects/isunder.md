@@ -1,6 +1,6 @@
 ---
 title: Isunder Technology
-stack: Html, Css, Vanilla  javascript
+stack: Html,Css,Vanilla,javascript
 slug: Isunder-Technology
 description: A simple one-page but a beautiful website with dark mode for isunder Tech, an electric car company.
 date: 2021-01-01T00:00:00+00:00
@@ -12,4 +12,4 @@ url: https://isundertech.com/
 github: none
 ---
 
-Isunder Tech is an Electric Vehicle Engine Manufacturing And Retrofit Company. that arose out of humble beginnings; their four young Cofounders hoping to help the proliferation of electric vehicles. Through research, they found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use.
+<span class="dropcap">I</span>sunder Tech is an Electric Vehicle Engine Manufacturing And Retrofit Company. that arose out of humble beginnings; their four young Cofounders hoping to help the proliferation of electric vehicles. Through research, they found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use.

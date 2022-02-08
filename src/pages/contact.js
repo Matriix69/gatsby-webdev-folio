@@ -62,13 +62,11 @@ export default function Contact() {
                             </span>
                         </h1>
                         <p>
-                            Please reach out for anything.{" "}
-                            <strong>
-                                I’m always interested in hearing about new
-                                projects and opportunities or even Just a
-                                connection from one developer to developer,
-                            </strong>{" "}
-                            I got you!
+                            Please reach out for anything. I’m always interested
+                            in hearing about new <strong>projects</strong> and{" "}
+                            <strong>opportunities</strong> or even Just a
+                            connection from one developer to{" "}
+                            <strong>developer</strong>, I got you!
                         </p>
                     </div>
 

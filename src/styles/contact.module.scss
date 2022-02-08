@@ -27,14 +27,13 @@
     }
 }
 .intro {
-    width: 80%;
+    width: 70%;
     text-align: center;
     @media screen and (max-width: 700px) {
         width: 100%;
     }
 
     h1 {
-        // color: var(--accent);
         font-weight: bold;
     }
 }
@@ -83,9 +82,8 @@
         width: 100%;
         max-width: 100%;
         border: none;
-        // border-bottom: 2px solid var(--border-bottom);
         border-radius: 0.5rem;
-        background-color: var(--bg-alt-color4);
+        background-color: var(--bg-alt-color5);
         -webkit-appearance: none;
         padding: 15px;
         outline: none;
@@ -94,7 +92,6 @@
         margin-top: 5px;
     }
     input::-webkit-input-placeholder {
-        // font-weight: 900;
         margin-left: 1rem;
         color: var(--text-color);
         opacity: 0;
@@ -106,9 +103,7 @@
         opacity: 0.4;
     }
     input:focus {
-        // border: 2px solid var(--accent);
-        // border-bottom-color: var(--accent);
-        background-color: var(--bg-alt-color5);
+        background-color: var(--bg-alt-color);
         transition: all 0.5s ease;
     }
     textarea {
@@ -117,12 +112,8 @@
         resize: none;
         margin-top: 5px;
         padding: 15px;
-
-        // background-color: transparent;
-        background-color: var(--bg-alt-color4);
-        // border: none;
+        background-color: var(--bg-alt-color5);
         border-radius: 0.5rem;
-        // border-bottom: 2px solid var(--border-bottom);
         color: var(--text-color);
         transition: all 0.5s ease;
     }
@@ -134,9 +125,7 @@
     }
     textarea:focus {
         outline: none;
-        // border-color: var(--accent);
-        // border-bottom-color: var(--accent);
-        background-color: var(--bg-alt-color5);
+        background-color: var(--bg-alt-color);
     }
 }
 

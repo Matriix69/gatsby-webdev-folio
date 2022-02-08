@@ -29,7 +29,8 @@ export default function Footer() {
                         <g-emoji class="g-emoji" alias="heart">
                             ❤
                         </g-emoji>{" "}
-                        &nbsp; by Isaac Chukwuka © 2021
+                        &nbsp; by Isaac Chukwuka &copy;{" "}
+                        {new Date().getFullYear()}
                     </p>
                 </div>
             </div>

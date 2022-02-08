@@ -1,6 +1,6 @@
 ---
 title: Portfolio
-stack: Scss & Gastby
+stack: Scss,Gastby,javaScript
 slug: portfolio
 description: My personal website portfolio, You could say this doubles as some sort of digital resume. Built with Gatsby. Don’t forget to reach out!
 date: 2021-02-01T00:00:00+00:00
@@ -12,7 +12,7 @@ url: https://isaacchukwuka.com
 github: https://github.com/Matriix69/gatsby-webdev-folio
 ---
 
-My personal website portfolio, You could say this doubles as some sort of digital resume. Built with Gatsby. Don’t forget to reach out!
+<span class="dropcap">M</span>y personal website portfolio, You could say this doubles as some sort of digital resume. Built with Gatsby. Don’t forget to reach out!
 
 <!-- <a href="isaacchukwuka.com" target="_blank">Visit site</a>
 <a href="https://github.com/Matriix69/face-rec-app" target="_blank">Source Code</a> -->

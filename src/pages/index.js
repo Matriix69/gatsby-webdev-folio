@@ -4,14 +4,14 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 //contants file
-import { Info } from "../constants/constants"
+// import { Info } from "../constants/constants"
 
 //styles
 import "../styles/global.scss"
 import * as styles from "../styles/home.module.scss"
 
 //paticles and typewritter effect
-import Typewriter from "typewriter-effect"
+// import Typewriter from "typewriter-effect"
 
 //iocns
 import { FaReact, FaNodeJs, FaCode } from "react-icons/fa"
@@ -22,8 +22,8 @@ import Seo from "../components/Seo"
 import Projects from "../components/Projects"
 import Svg from "../assets/isaac.svg"
 
-const typingSpeed = 50
-const deleteSpeed = 1
+// const typingSpeed = 50
+// const deleteSpeed = 1
 
 export default function Home({ data }) {
     const projects = data.projects.nodes
@@ -36,17 +36,12 @@ export default function Home({ data }) {
                 <div className={styles.listing}>
                     <div className={styles.type_container}>
                         <div className={styles.type_flow}>
-                            <Typewriter
-                                onInit={typewriter => {
-                                    typewriter
-                                        .changeDelay(typingSpeed)
-                                        .changeDeleteSpeed(deleteSpeed)
-                                        .typeString(Info.header1)
-                                        .pauseFor(600)
-                                        .typeString(Info.subHeader1)
-                                        .start()
-                                }}
-                            />
+                            <h1>
+                                Hey there, <span>I'm Isaac</span>
+                            </h1>
+                            <p>
+                                Nice to meet <span>you!</span>
+                            </p>
                         </div>
                     </div>
 
@@ -62,7 +57,7 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <FaCode />
                         </div>
-                        <div className="info-list-paragraph">
+                        <div className="info-list-paragraph pd">
                             <p>
                                 I am a <strong>full-stack web developer</strong>{" "}
                                 /<strong> Content creator</strong> based in
@@ -77,10 +72,10 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <FaReact />
                         </div>
-                        <div className="info-list-paragraph">
+                        <div className="info-list-paragraph pd pd">
                             <p>
-                                For <em>frontend</em> design, I'm personally a
-                                huge fan of
+                                For frontend design, I'm personally a huge fan
+                                of
                                 <b> React.js</b> and it's ecosystem (e.g.{" "}
                                 <b> Gatsby.js & Next.js</b>).
                             </p>
@@ -91,9 +86,9 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <FaNodeJs />
                         </div>
-                        <div className="info-list-paragraph">
+                        <div className="info-list-paragraph pd">
                             <p>
-                                For <em>backend</em> work, my go-to tool is{" "}
+                                For backend work, my go-to tool is{" "}
                                 <b>Node.js</b>, very efficient and overall
                                 developer productive. I have also worked with
                                 PHP in the past
@@ -105,13 +100,13 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <IoLogoFirebase />
                         </div>
-                        <div className="info-list-paragraph">
+                        <div className="info-list-paragraph pd">
                             <p>
-                                For my <em>serverless and cloud computing</em>,
-                                my go-to tool is <b>Firebase</b>, which is part
-                                of <b>Googles cloud platform</b> <em>(gcp)</em>,
-                                also <b>Amazon web services</b> <em>(aws)</em>{" "}
-                                as my alternative.
+                                For my serverless and cloud computing, my go-to
+                                tool is <b>Firebase</b>, which is part of{" "}
+                                <b>Googles cloud platform</b> (gcp), also{" "}
+                                <b>Amazon web services</b>(aws) as my
+                                alternative.
                             </p>
                         </div>
                     </div>
@@ -119,14 +114,12 @@ export default function Home({ data }) {
                     <hr />
 
                     <h1 className="post-heading">
-                        My recent Works <FaCode />
+                        Projects <FaCode />
                     </h1>
 
                     <section className="works">
-                        {projects.map((projects, index) => {
-                            return index < 2 ? (
-                                <Projects projects={projects} key={index} />
-                            ) : null
+                        {projects.slice(0, 2).map((projects, index) => {
+                            return <Projects projects={projects} key={index} />
                         })}
                     </section>
                 </div>

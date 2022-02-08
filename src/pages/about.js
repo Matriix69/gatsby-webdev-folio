@@ -46,36 +46,34 @@ export default function About() {
                                 alt="about"
                             />
                         </div>
+                        <div>
+                            <div className={styles.about_hello}>
+                                <h1>Hello </h1>
+                                <Robo className={styles.bounce} />
+                            </div>
 
-                        <div className={styles.about_hello}>
-                            <h1>Hello </h1>
-                            <Robo className={styles.bounce} />
+                            <p className="pd">
+                                Hi, <strong>I'm Isaac</strong>, a{" "}
+                                <strong>Software Engineer </strong> with hands
+                                on experience developing Fullstack web
+                                applications and APIs 💻, I do freelance jobs
+                                with a strong educational background in{" "}
+                                <strong>Computer engineering</strong> and full
+                                understanding of data structures, algorithms and
+                                system design.
+                            </p>
+
+                            <p className="pd">
+                                I like working with <strong>Javascript</strong>,{" "}
+                                <strong>React.js</strong> and{" "}
+                                <strong>NodeJS</strong> Among other things, and
+                                I'll be sharing my learnings and experience
+                                here, welcome!
+                                <span role="img" aria-label="smile-emoji">
+                                    🙂
+                                </span>
+                            </p>
                         </div>
-
-                        <p>
-                            Hi, <strong>I'm Isaac</strong>, a{" "}
-                            <strong>
-                                Software Engineer with hands on experience
-                                developing Fullstack web applications and APIs
-                            </strong>{" "}
-                            💻, I do freelance jobs with a strong educational
-                            background in{" "}
-                            <strong>
-                                Computer engineering and full understanding of
-                                data structures, algorithms and system design.
-                            </strong>
-                        </p>
-
-                        <p>
-                            I like working with <strong>Javascript</strong>,{" "}
-                            <strong>React.js</strong> and{" "}
-                            <strong>NodeJS</strong> Among other things, and I'll
-                            be sharing my learnings and experience here,
-                            welcome!
-                            <span role="img" aria-label="smile-emoji">
-                                🙂
-                            </span>
-                        </p>
                     </div>
 
                     <h2 className={styles.heading}>
@@ -166,9 +164,9 @@ export default function About() {
                         <div className={styles.skills_icon}>
                             <Mongodb />
                         </div>
-                        <div className={styles.skills_icon}>
+                        {/* <div className={styles.skills_icon}>
                             <Mysql />
-                        </div>
+                        </div> */}
                     </div>
 
                     <hr />
@@ -180,7 +178,7 @@ export default function About() {
                     <h2 className={styles.heading}>
                         Job <FaUserTie />
                     </h2>
-                    <p>
+                    <p className="pd">
                         If you want to hire me, I'm interested to work in
                         companies that offer
                         <strong>
@@ -196,7 +194,7 @@ export default function About() {
                         {" "}
                         Technology <BiMicrochip />
                     </h2>
-                    <p>
+                    <p className="pd">
                         I'm fascinated by technological advances which companies
                         such as Google, Apple, Tesla, SpaceX make. also, I make
                         tech videos and review gadgets{" "}
@@ -212,7 +210,7 @@ export default function About() {
                     <h2 className={styles.heading}>
                         Coding <BiCodeAlt />
                     </h2>
-                    <p>
+                    <p className="pd">
                         Whenever I have free time, I'm coding, reading up
                         documentation, or learning something new!
                     </p>
@@ -229,7 +227,7 @@ export default function About() {
                     <h2 className={styles.heading}>
                         Workout <IoBarbellOutline />
                     </h2>
-                    <p>
+                    <p className="pd">
                         I need to exercise within the morning before my brain
                         figures out what I‘m doing.
                         <em>
@@ -242,7 +240,7 @@ export default function About() {
                     <h2 className={styles.heading}>
                         Favorite Movies <CgLaptop />
                     </h2>
-                    <p>
+                    <p className="pd">
                         I love almost any kind of movie, but I'm more of an
                         animation person, I find them entertaining and very easy
                         to watch, some of my favorites are Fantastic Mr. Fox,

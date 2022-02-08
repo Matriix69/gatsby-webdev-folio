@@ -17,7 +17,7 @@ export default function portfolio({ data }) {
             />
             <div className={styles.container}>
                 <div className={styles.intro}>
-                    <h1>Recent works</h1>
+                    <h1>Portfolio</h1>
                     <p>Portfolio showcase of some of my work.</p>
                 </div>
 

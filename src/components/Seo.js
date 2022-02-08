@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
@@ -78,6 +78,15 @@ const SEO = ({ pageTitle, pageUrl, pageDescription, pageImage }) => (
                             content={seo.twitterUSername}
                         />
                         <meta name="twitter:image:alt" content={description} />
+                        <meta name="theme-color" content="#091625" />
+                        <meta
+                            name="apple-mobile-web-app-capable"
+                            content="yes"
+                        />
+                        <meta
+                            name="apple-mobile-web-app-status-bar-style"
+                            content="black-translucent"
+                        />
                     </Helmet>
                     <SchemaOrg
                         url={url}

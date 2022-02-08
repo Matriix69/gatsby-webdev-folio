@@ -46,36 +46,48 @@ export default function ProjectDetails({ data }) {
             <section>
                 <div className={styles.project_content}>
                     <div className={styles.heading}>
-                        <h1>{title}</h1>
-                        <h6>{stack}</h6>
+                        <h1 className="pd">{title}</h1>
+                        <h6>
+                            {stack.split(",").map((stack, i) => (
+                                <span key={i}>#{stack}</span>
+                            ))}
+                        </h6>
                     </div>
 
-                    <Slide slides={slides} title={title} />
+                    <div className={styles.details}>
+                        <div className={styles.slideWrapper}>
+                            <Slide slides={slides} title={title} />
+                        </div>
+                        <div>
+                            <div
+                                className="pd"
+                                dangerouslySetInnerHTML={{ __html: html }}
+                            />
 
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                            <div className={styles.project_actions}>
+                                <a
+                                    href={url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className={styles.project_live}
+                                >
+                                    <MdLiveTv />
+                                    Live
+                                </a>
 
-                    <div className={styles.project_actions}>
-                        <a
-                            href={url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={styles.project_live}
-                        >
-                            <MdLiveTv />
-                            View Live
-                        </a>
-
-                        {github && github !== "none" ? (
-                            <a
-                                href={github}
-                                target="_blank"
-                                rel="noreferrer"
-                                className={styles.project_github}
-                            >
-                                <FaGithub />
-                                View on github
-                            </a>
-                        ) : null}
+                                {github && github !== "none" ? (
+                                    <a
+                                        href={github}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={styles.project_github}
+                                    >
+                                        <FaGithub />
+                                        github
+                                    </a>
+                                ) : null}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

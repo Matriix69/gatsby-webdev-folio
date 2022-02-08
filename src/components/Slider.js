@@ -1,60 +1,68 @@
-import React,{useEffect, useState, useRef} from 'react'
+import React, { useEffect, useState, useRef } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import * as styles from '../styles/project-details.module.scss'
-import { useSwipeable } from 'react-swipeable'
+import * as styles from "../styles/project-details.module.scss"
+import { useSwipeable } from "react-swipeable"
 
-export default function ProjectDetails({slides, title}) {
+export default function ProjectDetails({ slides, title }) {
     //images for slide show
 
-    const [index, setIndex] = useState(0);
-    const timeoutRef = useRef(null);
-    const delay = 6000;
-    const prevSlide = index === 0 ? slides.length - 1 : index - 1 
+    const [index, setIndex] = useState(0)
+    const timeoutRef = useRef(null)
+    const delay = 6000
+    const prevSlide = index === 0 ? slides.length - 1 : index - 1
     const nextSlide = index === slides.length - 1 ? 0 : index + 1
 
     useEffect(() => {
-        resetTimeout();
+        resetTimeout()
         timeoutRef.current = setTimeout(
-          () =>
-            setIndex((prevIndex) =>
-              prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-            ),
-          delay
-        );
+            () =>
+                setIndex(prevIndex =>
+                    prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+                ),
+            delay
+        )
         return () => {
-            resetTimeout();
-        };
-    }, [index, slides.length]);
+            resetTimeout()
+        }
+    }, [index, slides.length])
 
     function resetTimeout() {
         if (timeoutRef.current) {
-          clearTimeout(timeoutRef.current);
+            clearTimeout(timeoutRef.current)
         }
     }
 
     //swipable props
     const handlers = useSwipeable({
-        onSwipedLeft: (eventData) => setIndex(nextSlide),   
-        onSwipedRight: (eventData) => setIndex(prevSlide),  
-        onSwipedUp: (eventData) => setIndex(nextSlide),     
-        onSwipedDown: (eventData) => setIndex(prevSlide),
-    });
-
-    
+        onSwipedLeft: eventData => setIndex(nextSlide),
+        onSwipedRight: eventData => setIndex(prevSlide),
+        onSwipedUp: eventData => setIndex(nextSlide),
+        onSwipedDown: eventData => setIndex(prevSlide),
+    })
 
     return (
         <>
-            
             <div className={styles.slideshow}>
                 <div className={styles.slideshowSlider} {...handlers}>
                     {slides.map((slides, idx) => (
-                        <div className={styles.slide  + " " + (idx === index ? styles.show : null)}  key={idx}>
-                            <GatsbyImage className={styles.img}  image={slides.img} alt={title}/>
+                        <div
+                            className={
+                                styles.slide +
+                                " " +
+                                (idx === index ? styles.show : null)
+                            }
+                            key={idx}
+                        >
+                            <GatsbyImage
+                                className={styles.img}
+                                image={slides.img}
+                                alt={title}
+                            />
                         </div>
                     ))}
                 </div>
             </div>
-            <div className={styles.slideshowDots}>
+            {/* <div className={styles.slideshowDots}>
                 {slides.map((_, idx) => (
                     <div 
                         key={idx} 
@@ -66,7 +74,7 @@ export default function ProjectDetails({slides, title}) {
                         tabIndex={0} 
                     ></div>
                 ))}
-            </div>
+            </div> */}
         </>
     )
 }

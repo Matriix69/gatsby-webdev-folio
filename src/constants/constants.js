@@ -13,8 +13,7 @@ import About from "../assets/about.svg"
 import Home from "../assets/home.svg"
 
 export const Info = {
-    header1:
-        "<h1>Hey there, <span class='accent'>I'm Isaac</span> <span aria-hidden='true' class='wave'>👋</span></h1>",
+    header1: "<h1>Hey there, <span class='accent'>I'm Isaac</span>",
     subHeader1: "<p>Nice to meet you!</p>",
 }
 
