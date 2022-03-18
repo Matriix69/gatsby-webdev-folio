@@ -14,7 +14,7 @@
     }
 
     h1 {
-        color: var(--default-color);
+        color: var(--accents-7);
         font-size: var(--font-size-xl);
         font-weight: 600;
         margin: 1rem 0;
@@ -73,7 +73,7 @@
             display: inline-block;
             width: 36px;
             height: auto;
-            color: var(--default-color);
+            color: var(--accents-7);
         }
         h1 {
             display: inline-block;
@@ -86,9 +86,18 @@
         }
     }
 }
+.hi_gradient {
+    color: var(--h-color);
+    // background-image: linear-gradient(90deg, #fa8142, #ff4088);
+    background-image: linear-gradient(90deg, #007fff, #0059b2);
+    color: #fff;
+    font-weight: 600;
 
+    padding: 0 4px;
+    border-radius: 3px;
+}
 .heading {
-    color: var(--default-color);
+    color: var(--accents-7);
     margin-bottom: 8px;
     display: flex;
     align-items: center;

@@ -24,7 +24,6 @@ import Express from "../assets/express.js.svg"
 import Firebass from "../assets/firebase-1.svg"
 import Aws from "../assets/aws-2.svg"
 import Mongodb from "../assets/mongodb.svg"
-import Mysql from "../assets/MySQL.svg"
 
 export default function About() {
     return (
@@ -48,14 +47,15 @@ export default function About() {
                         </div>
                         <div>
                             <div className={styles.about_hello}>
-                                <h1>Hello </h1>
+                                <h1>Your Host </h1>
                                 <Robo className={styles.bounce} />
                             </div>
 
                             <p className="pd">
-                                Hi, <strong>I'm Isaac</strong>, a{" "}
-                                <strong>Software Engineer </strong> with hands
-                                on experience developing Fullstack web
+                                Hi,{" "}
+                                <code className={"hi_gradient"}>I'm Isaac</code>
+                                , a <strong>Software Engineer </strong> with
+                                hands on experience developing Fullstack web
                                 applications and APIs 💻, I do freelance jobs
                                 with a strong educational background in{" "}
                                 <strong>Computer engineering</strong> and full
@@ -86,12 +86,8 @@ export default function About() {
                                 <span className={styles.notping}></span>
                             </span>
                             <div>
-                                <span class="text-light-secondary dark:text-dark-secondary">
-                                    November 2019 - Current · NG
-                                </span>
-                                <h1 class="text-lg font-bold text-light-primary dark:text-dark-primary">
-                                    Freelancing full-stack web developer
-                                </h1>
+                                <span>August 2019 - Current · NG</span>
+                                <h1>Freelancing full-stack web developer</h1>
                                 <h2>Matrix Web Consulting</h2>
                             </div>
                         </section>
@@ -100,12 +96,10 @@ export default function About() {
                                 <span className={styles.notping}></span>
                             </span>
                             <div>
-                                <span class="text-light-secondary dark:text-dark-secondary">
-                                    May 2021 - August 2021 · Lagos NG
+                                <span>
+                                    November 2019 - December 2021 · Lagos NG
                                 </span>
-                                <h1 class="text-lg font-bold text-light-primary dark:text-dark-primary">
-                                    Front-end engineer
-                                </h1>
+                                <h1>Front-end engineer</h1>
                                 <h2>Apex application Limited</h2>
                             </div>
                         </section>
@@ -164,9 +158,6 @@ export default function About() {
                         <div className={styles.skills_icon}>
                             <Mongodb />
                         </div>
-                        {/* <div className={styles.skills_icon}>
-                            <Mysql />
-                        </div> */}
                     </div>
 
                     <hr />
@@ -203,7 +194,7 @@ export default function About() {
                             href="https://www.youtube.com/channel/UC3uDI7f7hAWRoOLtXAKKt4Q"
                             target="_blank"
                         >
-                            <b>@AllRound-Rivew</b>
+                            <b>@All Round Rivew</b>
                         </a>
                     </p>
 

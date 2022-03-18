@@ -17,14 +17,6 @@
     @media (min-width: 1280px) {
         max-width: 1024px;
     }
-
-    h1 {
-        color: var(--default-color);
-        font-weight: 600;
-        margin-top: 32px;
-        margin-bottom: 8px;
-        font-size: var(--font-size-xlg);
-    }
 }
 .intro {
     width: 70%;
@@ -34,12 +26,21 @@
     }
 
     h1 {
+        color: var(--accents-7);
         font-weight: bold;
+        margin-top: 32px;
+        margin-bottom: 8px;
+        font-size: 3rem;
+        width: 100%;
+
+        @media screen and (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
 }
 .contact_wrapper {
     width: 70%;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     @media screen and (max-width: 700px) {
         width: 100%;
@@ -58,11 +59,11 @@
     width: 48%;
     @media screen and (max-width: 700px) {
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
 }
 .form_textarea {
-    margin-top: 30px;
+    margin-top: 15px;
     @media screen and (max-width: 700px) {
         width: 100%;
         margin-top: 0;
@@ -83,27 +84,28 @@
         max-width: 100%;
         border: none;
         border-radius: 0.5rem;
-        background-color: var(--bg-alt-color5);
+        background-color: var(--accents-1);
         -webkit-appearance: none;
         padding: 15px;
         outline: none;
-        color: var(--text-color);
+        color: var(--accents-6);
         transition: all 0.5s ease;
         margin-top: 5px;
     }
     input::-webkit-input-placeholder {
         margin-left: 1rem;
-        color: var(--text-color);
-        opacity: 0;
+        color: var(--accents-4);
+        font-weight: 700;
+        // opacity: 0;
     }
     input::-moz-placeholder {
-        font-weight: 900;
+        font-weight: 500;
         margin-left: 1rem;
-        color: var(--text-color);
+        color: var(--accents-6);
         opacity: 0.4;
     }
     input:focus {
-        background-color: var(--bg-alt-color);
+        background-color: var(--accents-2);
         transition: all 0.5s ease;
     }
     textarea {
@@ -112,20 +114,20 @@
         resize: none;
         margin-top: 5px;
         padding: 15px;
-        background-color: var(--bg-alt-color5);
+        background-color: var(--accents-1);
         border-radius: 0.5rem;
-        color: var(--text-color);
+        color: var(--accents-6);
         transition: all 0.5s ease;
     }
     textarea::-webkit-input-placeholder {
-        // font-weight: 900;
+        font-weight: 700;
         margin-left: 1rem;
-        color: var(--text-color);
-        opacity: 0;
+        color: var(--accents-4);
+        // opacity: 0;
     }
     textarea:focus {
         outline: none;
-        background-color: var(--bg-alt-color);
+        background-color: var(--accents-2);
     }
 }
 
@@ -144,26 +146,26 @@
 .button {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .errorText {
     color: var(--error-color);
-    font-weight: 700;
-    font-size: 13px;
+    // font-weight: 700;
+    font-size: 10px;
     margin-top: 2px;
     position: absolute;
-    bottom: -20px;
+    bottom: -15px;
     left: 0;
 }
 
-.modalSuccess {
-    background-color: #238636;
-}
-.modalError {
-    background-color: rgba(255, 38, 38, 0.726);
-}
+// .modalSuccess {
+//     color: #238636;
+// }
+// .modalError {
+//     color: rgba(255, 38, 38, 0.726);
+// }
 .model {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(17, 17, 17, 0.8);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -186,19 +188,20 @@
         max-width: 600px;
         margin: 4rem auto;
         transition: all 0.2s ease 0s;
-
-        box-shadow: 0 2px 3px 0 rgba(60, 64, 67, 0.3),
-            0 6px 10px 4px rgba(60, 64, 67, 0.15) !important;
-        background-color: var(--bg-alt-color) !important;
-        border-radius: 1rem !important;
+        background-color: var(--bg-color) !important;
+        border: 1px solid var(--accents-2);
+        border-radius: 0.335rem !important;
         overflow: hidden;
 
         .modal_header {
             color: #fff;
-            padding: 0.2em 1em;
+            padding: 0.5em 1em;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            background-color: var(--accents-1);
+            border-bottom: 1px solid var(--accents-2);
+
             p {
                 margin: 0;
                 padding: 0;
@@ -231,7 +234,7 @@
                     outline: none;
                     cursor: pointer;
                     border: none;
-                    background: var(--model-btn);
+                    background: var(--accents-1);
                     padding: 0.7rem 1rem;
                     border-radius: 8px;
                     margin-top: 10px;

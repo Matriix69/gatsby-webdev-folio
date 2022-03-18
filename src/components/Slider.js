@@ -54,7 +54,6 @@ export default function ProjectDetails({ slides, title }) {
                             key={idx}
                         >
                             <GatsbyImage
-                                className={styles.img}
                                 image={slides.img}
                                 alt={title}
                             />

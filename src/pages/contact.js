@@ -115,13 +115,13 @@ export default function Contact() {
                                                             styles.form_group
                                                         }
                                                     >
-                                                        <label htmlFor="name">
+                                                        {/* <label htmlFor="name">
                                                             My name is
-                                                        </label>
+                                                        </label> */}
                                                         <input
                                                             {...input}
                                                             type="text"
-                                                            // placeholder="Your Name"
+                                                            placeholder="My name is"
                                                         />
                                                         {meta.error &&
                                                             meta.touched && (
@@ -145,13 +145,13 @@ export default function Contact() {
                                                             styles.form_group
                                                         }
                                                     >
-                                                        <label htmlFor="email">
+                                                        {/* <label htmlFor="email">
                                                             My email address is
-                                                        </label>
+                                                        </label> */}
                                                         <input
                                                             {...input}
                                                             type="email"
-                                                            // placeholder="Your Email"
+                                                            placeholder="My email address is"
                                                         />
                                                         {meta.error &&
                                                             meta.touched && (
@@ -176,13 +176,13 @@ export default function Contact() {
                                                         styles.form_group
                                                     }
                                                 >
-                                                    <label htmlFor="email">
+                                                    {/* <label htmlFor="email">
                                                         Message
-                                                    </label>
+                                                    </label> */}
                                                     <textarea
                                                         {...input}
                                                         type="password"
-                                                        // placeholder="Include an optional message"
+                                                        placeholder="Message"
                                                     />
                                                     {meta.error &&
                                                         meta.touched && (

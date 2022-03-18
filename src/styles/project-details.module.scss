@@ -124,12 +124,17 @@
         flex-flow: wrap;
 
         span {
-            // background: var(--stack);
             padding: 0 5px;
             border-radius: 0.5rem;
-            border: var(--stack-border);
             background-color: var(--stack-bg);
-            // border: 1px solid var(--border-color);
+            display: inline-block;
+            padding: 0 8px;
+            margin: 0;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
         }
     }
 }

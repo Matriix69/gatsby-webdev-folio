@@ -25,7 +25,7 @@ export default function Projects({ projects }) {
                             {projects.frontmatter.stack
                                 .split(",")
                                 .map((stack, i) => (
-                                    <span key={i}>#{stack}</span>
+                                    <span key={i}>{stack}</span>
                                 ))}
                         </p>
                         <h2 className="post__title">

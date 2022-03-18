@@ -21,8 +21,6 @@ export default function ProjectDetails({ data }) {
         github,
     } = data.markdownRemark.frontmatter
 
-    console.log(github)
-
     //images for slide show
     const slides = [
         {
@@ -42,6 +40,7 @@ export default function ProjectDetails({ data }) {
                 pageTitle={`${title} | ${data.site.siteMetadata.title}`}
                 pageUrl={`projects/${slug}`}
                 pageDescription={description}
+                // pageImage={thumb}
             />
             <section>
                 <div className={styles.project_content}>
@@ -54,7 +53,7 @@ export default function ProjectDetails({ data }) {
                         </h6>
                     </div>
 
-                    <div className={styles.details}>
+                    <div >
                         <div className={styles.slideWrapper}>
                             <Slide slides={slides} title={title} />
                         </div>

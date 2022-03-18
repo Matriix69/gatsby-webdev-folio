@@ -42,8 +42,12 @@
     h1 {
         color: var(--h-color);
         font-weight: bold;
-        font-weight: 600;
         font-family: var(--condensed);
+        font-size: 3rem;
+
+        @media screen and (max-width: 600px) {
+            font-size: 2rem;
+        }
     }
     p {
         font-size: 14px;

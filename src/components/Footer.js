@@ -29,8 +29,12 @@ export default function Footer() {
                         <g-emoji class="g-emoji" alias="heart">
                             ❤
                         </g-emoji>{" "}
-                        &nbsp; by Isaac Chukwuka &copy;{" "}
-                        {new Date().getFullYear()}
+                        &nbsp; by{"  "} &nbsp;
+                        <code className="hi_gradient">
+                            {" "}
+                            Isaac Chukwuka{" "}
+                        </code>{" "}
+                        &nbsp; &copy; {new Date().getFullYear()}
                     </p>
                 </div>
             </div>
