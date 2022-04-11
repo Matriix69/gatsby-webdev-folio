@@ -78,7 +78,6 @@ const SEO = ({ pageTitle, pageUrl, pageDescription, pageImage }) => (
                             content={seo.twitterUSername}
                         />
                         <meta name="twitter:image:alt" content={description} />
-                        <meta name="theme-color" content="#091625" />
                         <meta
                             name="apple-mobile-web-app-capable"
                             content="yes"
@@ -87,6 +86,7 @@ const SEO = ({ pageTitle, pageUrl, pageDescription, pageImage }) => (
                             name="apple-mobile-web-app-status-bar-style"
                             content="black-translucent"
                         />
+                        <meta name="theme-color" content="#000" />
                     </Helmet>
                     <SchemaOrg
                         url={url}

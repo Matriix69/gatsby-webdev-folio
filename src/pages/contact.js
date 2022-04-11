@@ -121,7 +121,7 @@ export default function Contact() {
                                                         <input
                                                             {...input}
                                                             type="text"
-                                                            placeholder="My name is"
+                                                            placeholder="name"
                                                         />
                                                         {meta.error &&
                                                             meta.touched && (
@@ -151,7 +151,7 @@ export default function Contact() {
                                                         <input
                                                             {...input}
                                                             type="email"
-                                                            placeholder="My email address is"
+                                                            placeholder="Email"
                                                         />
                                                         {meta.error &&
                                                             meta.touched && (

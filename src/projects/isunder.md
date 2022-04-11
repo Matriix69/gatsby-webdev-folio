@@ -12,4 +12,4 @@ url: https://isundertech.com/
 github: none
 ---
 
-<span class="dropcap">I</span>sunder Tech is an Electric Vehicle Engine Manufacturing And Retrofit Company. that arose out of humble beginnings; their four young Cofounders hoping to help the proliferation of electric vehicles. Through research, they found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use.
+Isunder Tech is an Electric Vehicle Engine Manufacturing And Retrofit Company. that arose out of humble beginnings; their four young Cofounders hoping to help the proliferation of electric vehicles. Through research, they found that a concept called range anxiety was a key culprit limiting Electric Vehicle uptake and use.

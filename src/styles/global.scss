@@ -60,6 +60,8 @@ body {
 .light {
     --bg-color: hsl(0, 0%, 100%);
     --nav-bg: rgba(255, 255, 255, 0.8);
+    // --s: hsl(0, 0%, 98%);
+    --nav-bg2: hsla(0, 0%, 98%, 0.8);
     --error-color: #ff0d00;
 
     --post-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -82,10 +84,12 @@ body {
 .dark {
     --bg-color: #000;
     --nav-bg: hsla(0, 0%, 0%, 0.8);
+    // --s: hsl(0, 0%, 7%);
+    --nav-bg2: hsla(0, 0%, 7%, 0.8);
     --error-color: rgba(255, 130, 130, 0.884);
 
     --post-shadow: rgb(0 0 0 / 5%) 0px 8px 24px;
-    --accent: #2e579e;
+    --accent: #8ab4f8;
 
     --h-color: #fff;
     --sthumb: 0, 0%, 95%;
@@ -147,8 +151,8 @@ html {
 // general p and hr style
 
 p {
-    margin: 5px auto;
-    line-height: 1.5em;
+    margin: 1.2rem 0;
+    line-height: 1.8rem;
 }
 hr {
     // border: none;
@@ -204,7 +208,7 @@ layout & nav
 }
 .fa-secondary {
     transition: all 0.3s ease;
-    fill: var(--accents-2) !important;
+    fill: var(--accents-3) !important;
 }
 .fa-primary {
     transition: all 0.3s ease;
@@ -246,11 +250,11 @@ layout & nav
 }
 
 .pd {
-    line-height: 1.6;
-    letter-spacing: -0.02em;
-    margin: 0px;
-    font-weight: 400;
-    -webkit-font-smoothing: subpixel-antialiased;
+    a {
+        color: var(--h-color);
+        font-weight: 600;
+        box-shadow: inset 0 -3px 0 var(--accent);
+    }
 }
 .dropcap {
     font-family: "Pathways", Helvetica, sans-serif;
@@ -297,15 +301,14 @@ header {
             align-items: center;
             font-family: var(--condensed);
             svg {
-                height: 40px;
-                width: 40px;
+                height: 19px;
+                width: auto;
                 // border-radius: 100%;
                 margin-right: 10px;
                 border-style: none;
-                transform: translateY(5px);
 
                 path {
-                    fill: var(--accents-7);
+                    stroke: var(--accent);
                 }
             }
             img {
@@ -449,7 +452,9 @@ nav {
             height: 65px;
             font-size: var(--font-size-sm);
             // font-family: $font-stack;
-            background-color: var(--nav-bg);
+            // background-color: var(--nav-bg);
+            // border-top: 1px solid var(--accents-2);
+            background-color: var(--nav-bg2);
             // background: linear-gradient(
             //     180deg,
             //     rgba(24, 24, 24, 0) 0%,
@@ -620,7 +625,7 @@ article {
             width: 91.666667%;
             position: relative;
             box-shadow: var(--post-shadow);
-            border: 1px solid var(--accents-2);
+            border: 2px solid var(--accents-2);
             z-index: 10;
             transition: all 0.3s ease;
             // border: 1px solid rgb(30, 73, 118);
@@ -633,28 +638,7 @@ article {
                     letter-spacing: -0.03rem;
                     font-family: var(--condensed);
                 }
-                .post__subtitle {
-                    display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 6px;
 
-                    span {
-                        font-size: 12px;
-                        font-weight: 500;
-                        color: var(--accents-6);
-                        background-color: var(--accents-2);
-
-                        display: inline-block;
-                        padding: 0 8px;
-                        margin: 0;
-                        height: 24px;
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 16px;
-                    }
-                }
                 .post__description {
                     font-size: 14px;
                     color: var(--accents-6);
@@ -674,6 +658,29 @@ article {
                 }
             }
         }
+    }
+}
+
+.post__subtitle {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    span {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--accents-6);
+        background-color: var(--accents-2);
+
+        display: inline-block;
+        padding: 0 8px;
+        margin: 0;
+        height: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
     }
 }
 

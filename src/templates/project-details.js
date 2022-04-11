@@ -46,14 +46,14 @@ export default function ProjectDetails({ data }) {
                 <div className={styles.project_content}>
                     <div className={styles.heading}>
                         <h1 className="pd">{title}</h1>
-                        <h6>
+                        <h6 className="post__subtitle">
                             {stack.split(",").map((stack, i) => (
-                                <span key={i}>#{stack}</span>
+                                <span key={i}>{stack}</span>
                             ))}
                         </h6>
                     </div>
 
-                    <div >
+                    <div>
                         <div className={styles.slideWrapper}>
                             <Slide slides={slides} title={title} />
                         </div>

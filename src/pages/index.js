@@ -30,17 +30,20 @@ export default function Home({ data }) {
 
     return (
         <>
-            <Seo pageTitle="Isaac Chukwuka | Full-Stack Web Developer | JavaScript, React.js, Gatsby.js, Node.js, Web, Ui, Firebase, Aws" />
+            <Seo
+                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | JavaScript, TypeScrip, Node.js, React.js."
+                description="I'm a software engineer with hands-on experience developing Fullstack, high-performance applications using cutting-edge technologies"
+            />
 
             <section className={styles.home}>
                 <div className={styles.listing}>
                     <div className={styles.type_container}>
                         <div className={styles.type_flow}>
                             <h1>
-                                Hey there, <span>I'm Isaac</span>
+                                Hi, <span>I'm Isaac</span>
                             </h1>
                             <p>
-                                Nice to meet <span>you!</span>
+                                And I'm passionate about the <span>web.</span>
                             </p>
                         </div>
                     </div>
@@ -57,7 +60,7 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <FaCode />
                         </div>
-                        <div className="info-list-paragraph pd">
+                        <div className="info-list-paragraph">
                             <p>
                                 I am a <strong>full-stack web developer</strong>{" "}
                                 /<strong> Content creator</strong> based in

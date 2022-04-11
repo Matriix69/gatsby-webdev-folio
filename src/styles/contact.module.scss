@@ -81,21 +81,26 @@
 
     input {
         width: 100%;
-        max-width: 100%;
-        border: none;
-        border-radius: 0.5rem;
-        background-color: var(--accents-1);
-        -webkit-appearance: none;
-        padding: 15px;
+
+        border: 1px solid var(--accents-2);
         outline: none;
+        border-radius: 5px;
+        font-size: 13px;
+        line-height: 1.5rem;
+        padding: 0 12px;
+        background-color: var(--bg);
         color: var(--accents-6);
-        transition: all 0.5s ease;
-        margin-top: 5px;
+        transition: all 0.3s ease;
+        resize: none;
+        height: 48px !important;
+        appearance: none;
     }
     input::-webkit-input-placeholder {
         margin-left: 1rem;
         color: var(--accents-4);
         font-weight: 700;
+        font-size: 12px;
+
         // opacity: 0;
     }
     input::-moz-placeholder {
@@ -103,9 +108,12 @@
         margin-left: 1rem;
         color: var(--accents-6);
         opacity: 0.4;
+        font-size: 12px;
     }
     input:focus {
-        background-color: var(--accents-2);
+        // background-color: var(--accents-2);
+        border: 1px solid var(--accents-5);
+
         transition: all 0.5s ease;
     }
     textarea {
@@ -113,9 +121,18 @@
         min-height: 100px;
         resize: none;
         margin-top: 5px;
-        padding: 15px;
-        background-color: var(--accents-1);
-        border-radius: 0.5rem;
+        border: 1px solid var(--accents-2);
+        outline: none;
+        border-radius: 5px;
+        font-size: 13px;
+        line-height: 1.5rem;
+        padding: 0 12px;
+        background-color: var(--bg);
+        color: var(--text-primary);
+        transition: all 0.3s ease;
+        resize: none;
+        height: 48px !important;
+        appearance: none;
         color: var(--accents-6);
         transition: all 0.5s ease;
     }
@@ -127,7 +144,7 @@
     }
     textarea:focus {
         outline: none;
-        background-color: var(--accents-2);
+        border: 1px solid var(--accents-5);
     }
 }
 
