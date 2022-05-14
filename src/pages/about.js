@@ -8,22 +8,30 @@ import { BiMicrochip, BiCodeAlt } from "react-icons/bi"
 import { IoBarbellOutline } from "react-icons/io5"
 import { CgGames, CgLaptop } from "react-icons/cg"
 import { AiOutlineSmile } from "react-icons/ai"
-
 import Robo from "../assets/robot.svg"
-import Javascript2 from "../assets/javaScript.svg"
-import Typescript from "../assets/Typescript.svg"
-import Html from "../assets/HTML.svg"
-import Css from "../assets/CSS.svg"
-import Sass from "../assets/sass-1.svg"
-import ReactIcon from "../assets/react-2.svg"
-import Redux from "../assets/redux.svg"
-import Next from "../assets/nextjs.svg"
-import Gatsby from "../assets/gatsby.svg"
-import Node from "../assets/node.js.svg"
-import Express from "../assets/express.js.svg"
-import Firebass from "../assets/firebase-1.svg"
-import Aws from "../assets/aws-2.svg"
-import Mongodb from "../assets/mongodb.svg"
+import { experience, stack, Interests } from "../constants/constants"
+
+const WorkExperience = ({ current, title, company, date }) => {
+    return (
+        <section className={styles.work_container}>
+            <span className={styles.span}>
+                {current ? (
+                    <>
+                        <span className={styles.ping}></span>
+                        <span className={styles.notping}></span>
+                    </>
+                ) : (
+                    <span className={styles.notping}></span>
+                )}
+            </span>
+            <div>
+                <span>{date}</span>
+                <h1>{title}</h1>
+                <h2>{company}</h2>
+            </div>
+        </section>
+    )
+}
 
 export default function About() {
     return (
@@ -80,29 +88,14 @@ export default function About() {
                         Work experience <FaCode />
                     </h2>
                     <div className={styles.work}>
-                        <section className={styles.work_container}>
-                            <span className={styles.span}>
-                                <span className={styles.ping}></span>
-                                <span className={styles.notping}></span>
-                            </span>
-                            <div>
-                                <span>August 2019 - Current · NG</span>
-                                <h1>Freelancing full-stack web developer</h1>
-                                <h2>Matrix Web Consulting</h2>
-                            </div>
-                        </section>
-                        <section className={styles.work_container}>
-                            <span className={styles.span}>
-                                <span className={styles.notping}></span>
-                            </span>
-                            <div>
-                                <span>
-                                    November 2019 - December 2021 · Lagos NG
-                                </span>
-                                <h1>Front-end engineer</h1>
-                                <h2>Apex application Limited</h2>
-                            </div>
-                        </section>
+                        {experience.map(e => (
+                            <WorkExperience
+                                current={e.current}
+                                date={e.date}
+                                title={e.title}
+                                company={e.company}
+                            />
+                        ))}
                     </div>
 
                     <hr />
@@ -116,64 +109,24 @@ export default function About() {
                     </p>
 
                     <div className={styles.skills}>
-                        <div className={styles.skills_icon}>
-                            <Javascript2 />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Typescript />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Html />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Css />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Sass />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <ReactIcon />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Redux />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Next />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Gatsby />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Node />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Express />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Firebass />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Aws />
-                        </div>
-                        <div className={styles.skills_icon}>
-                            <Mongodb />
-                        </div>
+                        {stack.map(s => (
+                            <div title={s.title} className={styles.skills_icon}>
+                                {s.icon}
+                            </div>
+                        ))}
                     </div>
 
                     <hr />
 
-                    <h2 className={styles.heading}>
-                        Interests 1.0 <AiOutlineSmile />
-                    </h2>
+                    <h2 className={styles.heading}>Interests 1.0</h2>
 
-                    <h2 className={styles.heading}>
+                    <h3 className={styles.sub_heading}>
                         Job <FaUserTie />
-                    </h2>
+                    </h3>
                     <p className="pd">
                         If you want to hire me, I'm interested to work in
                         companies that offer
                         <strong>
-                            {" "}
                             modern technologies such as Node.js, React.js,
                             Gatsby.js, Firebase / Aws
                         </strong>
@@ -181,10 +134,9 @@ export default function About() {
                         where I can help design solutions.
                     </p>
 
-                    <h2 className={styles.heading}>
-                        {" "}
+                    <h3 className={styles.sub_heading}>
                         Technology <BiMicrochip />
-                    </h2>
+                    </h3>
                     <p className="pd">
                         I'm fascinated by technological advances which companies
                         such as Google, Apple, Tesla, SpaceX make. also, I make
@@ -198,26 +150,26 @@ export default function About() {
                         </a>
                     </p>
 
-                    <h2 className={styles.heading}>
+                    <h3 className={styles.sub_heading}>
                         Coding <BiCodeAlt />
-                    </h2>
+                    </h3>
                     <p className="pd">
                         Whenever I have free time, I'm coding, reading up
                         documentation, or learning something new!
                     </p>
 
-                    <h2 className={styles.heading}>
+                    <h3 className={styles.sub_heading}>
                         Gaming <CgGames />
-                    </h2>
+                    </h3>
                     <p>
                         I enjoy playing a lot of video games with my favorites
                         at the moment been Call of duty(Cod) and PlayerUnknown's
                         Battlegrounds(pubg)
                     </p>
 
-                    <h2 className={styles.heading}>
+                    <h3 className={styles.sub_heading}>
                         Workout <IoBarbellOutline />
-                    </h2>
+                    </h3>
                     <p className="pd">
                         I need to exercise within the morning before my brain
                         figures out what I‘m doing.
@@ -228,9 +180,9 @@ export default function About() {
                         </em>
                     </p>
 
-                    <h2 className={styles.heading}>
+                    <h3 className={styles.sub_heading}>
                         Favorite Movies <CgLaptop />
-                    </h2>
+                    </h3>
                     <p className="pd">
                         I love almost any kind of movie, but I'm more of an
                         animation person, I find them entertaining and very easy

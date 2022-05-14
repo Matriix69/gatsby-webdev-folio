@@ -4,7 +4,7 @@ stack: Next.js,Scss,Node,MongoDb
 slug: all-round-review
 description: All Round Review is an advanced tech review blog with onboard writers and editors built with next.js for fast performant pre-rendered webpages
 date: 2022-02-01T00:00:00+00:00
-thumb: ../images/thumbs/ar.jpg
+thumb: ../images/thumbs/ar.png
 carousel1: ../images/thumbs/ar1.png
 carousel2: ../images/thumbs/ar2.png
 carousel3: ../images/thumbs/ar3.png

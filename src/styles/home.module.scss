@@ -32,10 +32,9 @@
         font-size: 1.8rem;
         letter-spacing: -0.02em;
 
-        // font-weight: 500 !important;
+        font-weight: 300 !important;
         color: var(--accents-6);
         margin: 0 !important ;
-        font-family: var(--condensed);
         line-height: 1.5em;
         margin-top: 8px;
 
@@ -47,6 +46,7 @@
             // font-weight: 800;
             // letter-spacing: -0.03em;
             color: var(--h-color);
+            font-family: var(--condensed);
         }
     }
 

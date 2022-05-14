@@ -1,5 +1,7 @@
 import React from "react"
 import { socialLinks } from "../constants/constants"
+import Heart from "../assets/heart.svg"
+import HeartBG from "../assets/bg-heart.svg"
 
 import { FaCode } from "react-icons/fa"
 
@@ -25,16 +27,14 @@ export default function Footer() {
 
                 <div className="copyright">
                     <p>
-                        <FaCode /> &nbsp; with &nbsp;
-                        <g-emoji class="g-emoji" alias="heart">
-                            ❤
-                        </g-emoji>{" "}
-                        &nbsp; by{"  "} &nbsp;
-                        <code className="hi_gradient">
-                            {" "}
-                            Isaac Chukwuka{" "}
-                        </code>{" "}
-                        &nbsp; &copy; {new Date().getFullYear()}
+                        Made with
+                        <span>
+                            <HeartBG />
+                            <Heart />
+                        </span>
+                        by
+                        <code className="hi_gradient">Isaac Chukwuka</code>
+                        {new Date().getFullYear()}
                     </p>
                 </div>
             </div>

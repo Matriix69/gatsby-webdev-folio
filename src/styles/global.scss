@@ -151,7 +151,7 @@ html {
 // general p and hr style
 
 p {
-    margin: 1.2rem 0;
+    // margin: 1.2rem 0;
     line-height: 1.8rem;
 }
 hr {
@@ -237,8 +237,9 @@ layout & nav
     color: #fff;
     font-weight: 600;
 
-    padding: 0 4px;
+    padding: 3px 4px;
     border-radius: 3px;
+    line-height: 1;
 }
 // add shadow on navbar scroll
 .nav-scroll {
@@ -752,7 +753,7 @@ button style on contact & about
     margin-left: auto;
     .btn {
         padding: 2px;
-        height: 53px;
+        height: 47px;
         width: 127px;
         font-size: var(--font-size-sm);
         border: 2px solid var(--accent);
@@ -764,6 +765,7 @@ button style on contact & about
         background: transparent;
         transition: all 0.3s ease;
         position: relative;
+        text-transform: capitalize;
         // background-image: linear-gradient(to right, #007fff, #0059b2);
 
         .spinner {
@@ -799,7 +801,7 @@ button style on contact & about
 footer section
 ***********************************/
 footer {
-    padding: 0 40px 20px 40px;
+    // padding: 20px;
     margin-top: 50px;
     transition: all 0.3s ease;
     font-size: 14px;
@@ -808,7 +810,7 @@ footer {
     align-items: center;
     text-align: center;
     background: var(--accents-1);
-    border-top: 1px solid var(--accents-2);
+    // border-top: 1px solid var(--accents-2);
 
     @media screen and (max-width: 800px) {
         display: none;
@@ -825,30 +827,20 @@ footer {
             flex-flow: column;
             align-items: center;
             color: var(--text-color);
-            hr {
-                margin: 0 auto;
-            }
-            p:nth-child(1) {
+
+            p {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 0;
-                margin-top: 5px;
-            }
-            a {
-                display: flex;
-                align-items: center;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                color: var(--text-color);
+                margin-top: 0.5rem;
 
-                b {
-                    opacity: 0.7;
+                svg {
+                    width: 1rem;
                 }
-
-                @media (max-width: 768px) {
-                    position: relative;
+                span,
+                code {
+                    line-height: 1;
+                    margin: 0 5px;
                 }
             }
         }
@@ -876,6 +868,16 @@ footer {
         }
     }
 }
+.heart-absolute {
+    min-width: 1em;
+    min-height: 1em;
+    position: absolute;
+    margin-top: 4px;
+    opacity: 0.2;
+}
+.animate-scale {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
 
 /**********************************
 socail links on hero and footer
@@ -891,7 +893,7 @@ socail links on hero and footer
     transition: all 0.3s ease;
     -webkit-tap-highlight-color: transparent;
     // color: var(--accents-6);
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
 
     a {
         position: relative;
@@ -912,8 +914,8 @@ socail links on hero and footer
         }
 
         svg {
-            height: 25px;
-            width: 25px;
+            height: auto;
+            width: 20px;
             color: var(--h-color);
             font-size: 2rem;
             &:hover {
@@ -968,5 +970,13 @@ socail links on hero and footer
         &:hover {
             transform: translateY(-3px);
         }
+    }
+}
+
+@keyframes ping {
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
     }
 }

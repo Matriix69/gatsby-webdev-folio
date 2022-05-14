@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import * as styles from "../styles/contact.module.scss"
 import { Form, Field } from "react-final-form"
-import { BsCheckCircle, BsXCircle } from "react-icons/bs"
 import emailjs from "emailjs-com"
 import Seo from "../components/Seo"
-import { socialLinksContact } from "../constants/constants"
+import { socialLinks } from "../constants/constants"
+import { ModalError, ModalSuccess } from "../components/MsgModal"
 
 export default function Contact() {
     const [emailSent, setEmailSent] = useState(false)
@@ -240,7 +240,7 @@ export default function Contact() {
                             className="headerSocial"
                             style={{ marginBottom: "20px" }}
                         >
-                            {socialLinksContact.map((socialLinks, idx) => (
+                            {socialLinks.map((socialLinks, idx) => (
                                 <a
                                     href={socialLinks.link}
                                     key={idx}
@@ -249,7 +249,6 @@ export default function Contact() {
                                     rel="noreferrer"
                                 >
                                     {socialLinks.icon}
-                                    {/* <p>{socialLinks.title}</p> */}
                                 </a>
                             ))}
                         </div>
@@ -265,69 +264,12 @@ export default function Contact() {
                 </div>
             </section>
 
-            <div
-                className={
-                    styles.model + " " + (emailSent ? styles.show : null)
-                }
-            >
-                <div className={styles.modal_wrapper}>
-                    <div
-                        className={
-                            styles.modal_header + " " + styles.modalSuccess
-                        }
-                    >
-                        <p className="text text-title">Yaay!</p>
-                    </div>
-                    <div className={styles.modal_content}>
-                        <div className={styles.modal_body}>
-                            <BsCheckCircle
-                                style={{ fontSize: "45px", color: "#66cc66" }}
-                            />
-                            <p>
-                                Your message has been sent! I will be in touch
-                                as soon as possible
-                            </p>
-                        </div>
-                        <div className={styles.modal_footer}>
-                            <button onClick={handleCloseSuccess}>close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                className={
-                    styles.model + " " + (emailFailed ? styles.show : "")
-                }
-            >
-                <div className={styles.modal_wrapper}>
-                    <div
-                        className={
-                            styles.modal_header + " " + styles.modalError
-                        }
-                    >
-                        <p className="text text-title">An error occured</p>
-                    </div>
-                    <div className={styles.modal_content}>
-                        <div className={styles.modal_body}>
-                            <BsXCircle
-                                style={{
-                                    fontSize: "45px",
-                                    color: "rgba(255, 38, 38, 0.726)",
-                                }}
-                            />
-                            <p>
-                                Something went wrong, this could be a network
-                                error, please try again because I will love to
-                                hear from you!
-                            </p>
-                        </div>
-                        <div className={styles.modal_footer}>
-                            <button onClick={handleCloseFailed}>close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {emailSent && (
+                <ModalSuccess handleCloseSuccess={handleCloseSuccess} />
+            )}
+            {emailFailed && (
+                <ModalError handleCloseFailed={handleCloseFailed} />
+            )}
         </>
     )
 }

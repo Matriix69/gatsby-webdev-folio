@@ -86,24 +86,20 @@
         }
     }
 }
-
-.heading {
+.heading,
+.sub_heading {
     color: var(--accents-7);
     margin-bottom: 8px;
     display: flex;
+    gap: 6px;
     align-items: center;
     margin-top: 2rem !important;
     margin-bottom: 0.5rem;
-    font-weight: 600;
-    font-family: var(--condensed);
-
-    &:not(:first-of-type) {
-        margin-top: 32px;
-    }
-
-    svg {
-        margin-left: 5px;
-    }
+}
+.sub_heading {
+    color: var(--accent);
+    // font-weight: 600;
+    // font-family: var(--condensed);
 
     & + p {
         b {
