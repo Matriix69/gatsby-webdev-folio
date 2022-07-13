@@ -16,16 +16,18 @@ export default function portfolio({ data }) {
                 pageDescription="Web Development portfolio by Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws, Interests, hobbies, tutorials and more"
             />
             <div className={styles.container}>
-                <div className={styles.intro}>
-                    <h1>Portfolio</h1>
-                    <p>Portfolio showcase of some of my work.</p>
-                </div>
+                <div className={styles.sub_container}>
+                    <div className={styles.intro}>
+                        <h1>Portfolio</h1>
+                        <p>Portfolio showcase of some of my work.</p>
+                    </div>
 
-                <section>
-                    {projects.map((projects, index) => {
-                        return <Projects projects={projects} key={index} />
-                    })}
-                </section>
+                    <section>
+                        {projects.map((projects, index) => {
+                            return <Projects projects={projects} key={index} />
+                        })}
+                    </section>
+                </div>
             </div>
         </>
     )

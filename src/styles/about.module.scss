@@ -53,7 +53,7 @@
             width: 192px;
             height: 192px;
             border-radius: 50%;
-            border-top-right-radius: 0;
+            // border-top-right-radius: 0;
             // margin: 3rem;
             // margin-left: 0;
 
@@ -78,8 +78,8 @@
         h1 {
             display: inline-block;
             font-size: var(--font-size-xlg);
-            font-weight: 600;
-            font-family: var(--condensed);
+            font-weight: 700;
+            // font-family: var(--condensed);
             margin: 0;
             margin-right: 10px;
             line-height: 1;
@@ -88,16 +88,26 @@
 }
 .heading,
 .sub_heading {
-    color: var(--accents-7);
+    color: var(--h-color);
     margin-bottom: 8px;
     display: flex;
-    gap: 6px;
+    gap: 8px;
     align-items: center;
     margin-top: 2rem !important;
     margin-bottom: 0.5rem;
+    font-weight: 700;
+
+    svg {
+        opacity: 0.5;
+        path {
+            fill: currentColor;
+        }
+    }
 }
 .sub_heading {
-    color: var(--accent);
+    color: var(--accents-7);
+
+    // color: var(--accent);
     // font-weight: 600;
     // font-family: var(--condensed);
 

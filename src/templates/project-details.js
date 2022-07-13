@@ -42,50 +42,51 @@ export default function ProjectDetails({ data }) {
                 pageDescription={description}
                 // pageImage={thumb}
             />
-            <section>
+            <section className={styles.top_project_content}>
                 <div className={styles.project_content}>
                     <div className={styles.heading}>
-                        <h1 className="pd">{title}</h1>
-                        <h6 className="post__subtitle">
-                            {stack.split(",").map((stack, i) => (
-                                <span key={i}>{stack}</span>
-                            ))}
-                        </h6>
+                        <h1>{title}</h1>
+                        <div className="post__subtitle">
+                            Built with{" "}
+                            {stack
+                                .split(",")
+                                .map((stack, i) => stack)
+                                .join(", ")}
+                        </div>
                     </div>
 
-                    <div>
-                        <div className={styles.slideWrapper}>
-                            <Slide slides={slides} title={title} />
-                        </div>
-                        <div>
-                            <div
-                                className="pd"
-                                dangerouslySetInnerHTML={{ __html: html }}
-                            />
+                    <div className={styles.slideWrapper}>
+                        <Slide slides={slides} title={title} />
+                    </div>
 
-                            <div className={styles.project_actions}>
+                    <div className={styles.project_details}>
+                        <div
+                            className="pd"
+                            dangerouslySetInnerHTML={{ __html: html }}
+                        />
+
+                        <div className={styles.project_actions}>
+                            <a
+                                href={url}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={styles.project_live}
+                            >
+                                <MdLiveTv />
+                                View live
+                            </a>
+
+                            {github && github !== "none" ? (
                                 <a
-                                    href={url}
+                                    href={github}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className={styles.project_live}
+                                    className={styles.project_github}
                                 >
-                                    <MdLiveTv />
-                                    Live
+                                    <FaGithub />
+                                    See repo on github
                                 </a>
-
-                                {github && github !== "none" ? (
-                                    <a
-                                        href={github}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className={styles.project_github}
-                                    >
-                                        <FaGithub />
-                                        github
-                                    </a>
-                                ) : null}
-                            </div>
+                            ) : null}
                         </div>
                     </div>
                 </div>

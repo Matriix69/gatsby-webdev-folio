@@ -106,98 +106,76 @@ export default function Contact() {
                                 values,
                             }) => (
                                 <form onSubmit={handleSubmit}>
-                                    <div className={styles.form_input}>
-                                        <div className={styles.form_side}>
-                                            <Field name="name">
-                                                {({ input, meta }) => (
-                                                    <div
-                                                        className={
-                                                            styles.form_group
-                                                        }
-                                                    >
-                                                        {/* <label htmlFor="name">
+                                    <Field name="name">
+                                        {({ input, meta }) => (
+                                            <div className={styles.form_group}>
+                                                {/* <label htmlFor="name">
                                                             My name is
                                                         </label> */}
-                                                        <input
-                                                            {...input}
-                                                            type="text"
-                                                            placeholder="name"
-                                                        />
-                                                        {meta.error &&
-                                                            meta.touched && (
-                                                                <span
-                                                                    className={
-                                                                        styles.errorText
-                                                                    }
-                                                                >
-                                                                    {meta.error}
-                                                                </span>
-                                                            )}
-                                                    </div>
-                                                )}
-                                            </Field>
-                                        </div>
-                                        <div className={styles.form_side}>
-                                            <Field name="email">
-                                                {({ input, meta }) => (
-                                                    <div
+                                                <input
+                                                    {...input}
+                                                    type="text"
+                                                    placeholder="name"
+                                                />
+                                                {meta.error && meta.touched && (
+                                                    <span
                                                         className={
-                                                            styles.form_group
+                                                            styles.errorText
                                                         }
                                                     >
-                                                        {/* <label htmlFor="email">
+                                                        {meta.error}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        )}
+                                    </Field>
+                                    <Field name="email">
+                                        {({ input, meta }) => (
+                                            <div className={styles.form_group}>
+                                                {/* <label htmlFor="email">
                                                             My email address is
                                                         </label> */}
-                                                        <input
-                                                            {...input}
-                                                            type="email"
-                                                            placeholder="Email"
-                                                        />
-                                                        {meta.error &&
-                                                            meta.touched && (
-                                                                <span
-                                                                    className={
-                                                                        styles.errorText
-                                                                    }
-                                                                >
-                                                                    {meta.error}
-                                                                </span>
-                                                            )}
-                                                    </div>
+                                                <input
+                                                    {...input}
+                                                    type="email"
+                                                    placeholder="Email"
+                                                />
+                                                {meta.error && meta.touched && (
+                                                    <span
+                                                        className={
+                                                            styles.errorText
+                                                        }
+                                                    >
+                                                        {meta.error}
+                                                    </span>
                                                 )}
-                                            </Field>
-                                        </div>
-                                    </div>
-                                    <div className={styles.form_textarea}>
-                                        <Field name="message">
-                                            {({ input, meta }) => (
-                                                <div
-                                                    className={
-                                                        styles.form_group
-                                                    }
-                                                >
-                                                    {/* <label htmlFor="email">
+                                            </div>
+                                        )}
+                                    </Field>
+                                    <Field name="message">
+                                        {({ input, meta }) => (
+                                            <div className={styles.form_group}>
+                                                {/* <label htmlFor="email">
                                                         Message
                                                     </label> */}
-                                                    <textarea
-                                                        {...input}
-                                                        type="password"
-                                                        placeholder="Message"
-                                                    />
-                                                    {meta.error &&
-                                                        meta.touched && (
-                                                            <span
-                                                                className={
-                                                                    styles.errorText
-                                                                }
-                                                            >
-                                                                {meta.error}
-                                                            </span>
-                                                        )}
-                                                </div>
-                                            )}
-                                        </Field>
-                                    </div>
+                                                <textarea
+                                                    {...input}
+                                                    type="password"
+                                                    placeholder="Message"
+                                                />
+                                                {meta.error && meta.touched && (
+                                                    <span
+                                                        className={
+                                                            styles.errorText
+                                                        }
+                                                    >
+                                                        {meta.error}
+                                                    </span>
+                                                )}
+                                            </div>
+                                        )}
+                                    </Field>
+
                                     <div
                                         className={
                                             "button_wrapper " + styles.button
@@ -220,7 +198,7 @@ export default function Contact() {
                                                     <div className="spinner"></div>
                                                 </div>
                                             ) : (
-                                                "Contact me"
+                                                "Send"
                                             )}
                                         </button>
                                     </div>
@@ -247,8 +225,9 @@ export default function Contact() {
                                     title={socialLinks.title}
                                     target="_blank"
                                     rel="noreferrer"
+                                    className={socialLinks.title}
                                 >
-                                    {socialLinks.icon}
+                                    {socialLinks.icon} {socialLinks.title}
                                 </a>
                             ))}
                         </div>

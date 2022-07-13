@@ -31,7 +31,7 @@ export default function Projects({ projects }) {
                         <h2 className="post__title">
                             {projects.frontmatter.title}
                         </h2>
-                        <p className="post__description pd">
+                        <p className="post__description">
                             {projects.frontmatter.description}
                         </p>
                     </div>

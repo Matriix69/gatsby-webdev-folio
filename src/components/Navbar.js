@@ -3,6 +3,8 @@ import { navLink, navLinkMobile } from "../constants/constants"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import Logo from "../assets/isaac_chukwuka_logo.svg"
+import Sun from "../assets/sun.svg"
+import Moon from "../assets/moon.svg"
 // import Logo from "../assets/logo.svg"
 import { RiMoonFill } from "react-icons/ri"
 import { BiBrightness } from "react-icons/bi"
@@ -22,7 +24,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY >= 70) {
+            if (window.scrollY >= 20) {
                 setScroll(true)
             } else {
                 setScroll(false)
@@ -41,8 +43,10 @@ export default function Navbar() {
             <header className={scroll ? "nav-scroll" : ""}>
                 <div className="wrap">
                     <h1 className="nav-title">
-                        {/* <Logo /> */}
-                        <Link to="/">{title}</Link>
+                        <Logo />
+                        <Link to="/">
+                            <span>ISaac Chukwuka</span>
+                        </Link>
                     </h1>
 
                     <ThemeToggler>
@@ -63,11 +67,7 @@ export default function Navbar() {
                                     toggleTheme(nextTheme)
                                 }}
                             >
-                                {theme === "light" ? (
-                                    <RiMoonFill />
-                                ) : (
-                                    <BiBrightness />
-                                )}
+                                {theme === "light" ? <Moon /> : <Sun />}
                             </i>
                         )}
                     </ThemeToggler>

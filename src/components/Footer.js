@@ -10,7 +10,7 @@ export default function Footer() {
         <footer>
             <div className="wrap">
                 <div className="logo-email">
-                    <div className="headerSocial">
+                    <div className="headerSocial_footer">
                         {socialLinks.map((socialLinks, idx) => (
                             <a
                                 href={socialLinks.link}

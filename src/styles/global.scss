@@ -1,18 +1,45 @@
-// @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap");
 @font-face {
-    font-family: "pathways";
-    src: url("../fonts/pathways.woff2");
+    font-family: "web-sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/regular.woff2) format("woff2");
 }
 @font-face {
-    font-family: "sans";
-    src: url("../fonts/sans.ttf");
+    font-family: "web-sans";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/regular-italic.woff2) format("woff2");
 }
-
-$font-stack: "Zilla Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@font-face {
+    font-family: "web-sans";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../fonts/medium.woff2) format("woff2");
+}
+@font-face {
+    font-family: "web-sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(../fonts/semi-bold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "web-sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/bold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "web-sans";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/bold-italic.woff2) format("woff2");
+}
 
 * {
     margin: 0;
@@ -25,6 +52,8 @@ $font-stack: "Zilla Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto
 :after,
 :before {
     box-sizing: border-box;
+    font-family: var(--font-sans);
+    font-weight: 500;
 }
 
 html,
@@ -35,7 +64,7 @@ body,
 }
 
 :root {
-    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    --font-sans: "web-sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
         "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
 
@@ -46,7 +75,7 @@ body {
     background: var(--bg-color);
     color: var(--accents-6);
     font-family: var(--font-sans);
-    font-size: 16px;
+    font-size: 17px;
     transition: all 0.3s ease;
 
     --font-size-sm: 14px;
@@ -70,6 +99,7 @@ body {
     --stack: hsla(0, 0%, 5%, 0.05);
     --sthumb: 0, 0%, 5%;
     --accent-border: inset 0px -1px 1px var(--accents-2);
+    --header-border-bottom: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
     --btn-text-color: #eaeaea;
 
     --accents-1: #fafafa;
@@ -89,11 +119,12 @@ body {
     --error-color: rgba(255, 130, 130, 0.884);
 
     --post-shadow: rgb(0 0 0 / 5%) 0px 8px 24px;
-    --accent: #8ab4f8;
+    --accent: rgb(0, 212, 159);
 
     --h-color: #fff;
     --sthumb: 0, 0%, 95%;
     --accent-border: var(--accents-2) 0px -1px 1px inset;
+    --header-border-bottom: inset 0 -1px 0 0 hsla(0, 0%, 100%, 0.1);
     --btn-text-color: #333;
 
     --accents-8: #fafafa;
@@ -152,7 +183,7 @@ html {
 
 p {
     // margin: 1.2rem 0;
-    line-height: 1.8rem;
+    line-height: 1.7rem;
 }
 hr {
     // border: none;
@@ -233,8 +264,8 @@ layout & nav
 .hi_gradient {
     color: var(--h-color);
     // background-image: linear-gradient(90deg, #fa8142, #ff4088);
-    background-image: linear-gradient(90deg, #007fff, #0059b2);
-    color: #fff;
+    // background-image: linear-gradient(90deg, #007fff, #0059b2);
+    color: var(--h-color);
     font-weight: 600;
 
     padding: 3px 4px;
@@ -244,13 +275,16 @@ layout & nav
 // add shadow on navbar scroll
 .nav-scroll {
     @media only screen and (min-width: 800px) {
-        box-shadow: var(--accent-border);
+        box-shadow: var(--header-border-bottom);
         background-color: var(--nav-bg);
         backdrop-filter: saturate(180%) blur(20px);
     }
 }
 
 .pd {
+    @media only screen and (min-width: 800px) {
+        padding: 44px 84px 84px 0;
+    }
     a {
         color: var(--h-color);
         font-weight: 600;
@@ -272,7 +306,7 @@ layout & nav
 //navbar
 header {
     padding: 0px 20px;
-    font-family: $font-stack;
+    // font-family: $font-stack;
     position: sticky;
     height: 65px;
     // border-bottom: 1px;
@@ -295,21 +329,25 @@ header {
             margin-right: auto;
             position: relative;
             transition: all 0.3s ease;
-            width: 240px;
-            min-width: 240px;
+            // width: 240px;
+            // min-width: 240px;
             border-radius: 25px;
             display: flex;
             align-items: center;
-            font-family: var(--condensed);
+
+            // font-family: var(--condensed);
             svg {
-                height: 19px;
+                height: 25px;
                 width: auto;
                 // border-radius: 100%;
-                margin-right: 10px;
+                margin-right: 5px;
                 border-style: none;
+                // border-radius: 100%;
+                transform: translateY(-2px);
 
-                path {
-                    stroke: var(--accent);
+                path,
+                rect {
+                    fill: var(--accents-7);
                 }
             }
             img {
@@ -326,9 +364,22 @@ header {
                 cursor: pointer;
                 // color: var(--accent);
                 color: var(--h-color);
-                font-size: var(--font-size-lg);
-                font-weight: normal;
-                font-weight: 800;
+                font-size: 21px;
+                width: 170px;
+
+                span {
+                    font-weight: 700;
+                    // display: inline-flex;
+                    width: 100%;
+                    &::first-letter {
+                        font-size: 0px;
+                    }
+                }
+                span:first-letter {
+                    // display: none;
+                    font-size: 0;
+                    // font-weight: 700;
+                }
             }
         }
 
@@ -348,6 +399,11 @@ header {
                 height: 1.3em;
                 color: var(--accents-6);
                 transition: color 0.5s ease;
+
+                path,
+                rect {
+                    fill: var(--accents-6);
+                }
 
                 &:hover .fa-secondary {
                     fill: var(--h-color) !important ;
@@ -376,14 +432,14 @@ nav {
 
         a {
             margin-left: 24px;
-            color: var(--accents-6);
+            color: var(--h-color);
             position: relative;
             text-decoration: none;
             text-transform: capitalize;
             font-size: var(--font-size-sm);
             font-weight: 500;
             // padding: 8px 16px;
-            opacity: 0.8;
+            opacity: 0.7;
             transition: opacity 0.3s ease, border-bottom 0.3s ease;
 
             &:last-of-type {
@@ -392,6 +448,7 @@ nav {
 
             &:hover {
                 color: var(--h-color);
+                opacity: 1;
             }
             &:hover::after {
                 -webkit-transform: translateZ(0);
@@ -483,6 +540,7 @@ nav {
             }
             span {
                 font-size: 10px;
+                font-weight: 500;
             }
         }
     }
@@ -581,12 +639,13 @@ project section
     margin-bottom: 2rem;
     display: flex;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--accents-7);
-    font-weight: 600;
-    font-family: var(--condensed);
+    font-weight: 700;
+    // font-family: var(--condensed);
     svg {
         margin-left: 10px;
+        opacity: 0.5;
     }
 }
 .works {
@@ -635,13 +694,13 @@ article {
                     font-size: var(--font-size-lg);
                     color: var(--accents-7);
                     margin: 1rem 0;
-                    font-weight: 600;
+                    font-weight: 700;
                     letter-spacing: -0.03rem;
-                    font-family: var(--condensed);
+                    // font-family: var(--condensed);
                 }
 
                 .post__description {
-                    font-size: 14px;
+                    font-size: 15px;
                     color: var(--accents-6);
                     // text-align: justify;
                 }
@@ -752,21 +811,19 @@ button style on contact & about
     transition: all 0.3s ease;
     margin-left: auto;
     .btn {
-        padding: 2px;
-        height: 47px;
-        width: 127px;
-        font-size: var(--font-size-sm);
-        border: 2px solid var(--accent);
-        border-radius: 0.5rem;
-        color: var(--accents-6);
+        padding: 0 12px;
+        height: 48px;
+        width: 100%;
+        font-size: 16px;
+        font-family: "web-sans";
+        background: var(--accent);
+        border-radius: 5px;
+        color: var(--bg-color);
         cursor: pointer;
         font-weight: 600;
         outline: none;
-        background: transparent;
         transition: all 0.3s ease;
         position: relative;
-        text-transform: capitalize;
-        // background-image: linear-gradient(to right, #007fff, #0059b2);
 
         .spinner {
             position: absolute;
@@ -882,11 +939,26 @@ footer {
 /**********************************
 socail links on hero and footer
 ***********************************/
-
+.headerSocial_footer {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    margin-top: 11px;
+    position: relative;
+    z-index: 2 !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
 .headerSocial {
     display: flex;
     justify-content: center;
-    flex-flow: wrap;
+    flex-direction: column;
+    gap: 10px;
+    // max-width: 320px;
+    // margin: 0 auto;
+    // flex-flow: wrap;
+    margin-top: 30px;
     position: relative;
     z-index: 2 !important;
     cursor: pointer;
@@ -897,21 +969,18 @@ socail links on hero and footer
 
     a {
         position: relative;
+        height: 49px;
+        padding: 0 12px;
         // color: var(--text-color) !important;
-        color: var(--accents-7);
+        // color: var(--accents-7);
 
         transition: all 0.3s ease-in;
-        // font-size: 2rem;
-        margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        @media screen and (max-width: 435px) {
-            margin-top: 10px;
-        }
+        gap: 9px;
+        font-size: 16px;
+        border-radius: 5px;
 
         svg {
             height: auto;
@@ -928,7 +997,7 @@ socail links on hero and footer
             margin: 5px;
         }
         &:hover {
-            transform: translateY(-5px);
+            transform: translateX(3px);
         }
     }
 }
@@ -979,4 +1048,28 @@ socail links on hero and footer
         transform: scale(2);
         opacity: 0;
     }
+}
+
+.Twitter {
+    // background-color: rgb(29, 155, 240);
+    background-color: var(--accents-2);
+    color: var(--accents-7);
+}
+.Github {
+    background-color: var(--accents-2);
+    color: var(--accents-7);
+}
+.Linkedin {
+    // background-color: #0a66c2;
+    background-color: var(--accents-2);
+    color: var(--accents-7);
+}
+.Telegram {
+    background-color: #0088cc;
+}
+.Youtube {
+    background-color: #f00;
+}
+.Spotify {
+    background-color: #1ed760;
 }

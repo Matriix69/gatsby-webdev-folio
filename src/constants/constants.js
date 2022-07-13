@@ -79,11 +79,11 @@ export const socialLinks = [
         link: "https://twitter.com/isaacchukwuka_",
         icon: <FaTwitter style={style} />,
     },
-    {
-        title: "Telegram",
-        link: "https://t.me/Mvtrixx",
-        icon: <FaTelegramPlane style={style} />,
-    },
+    // {
+    //     title: "Telegram",
+    //     link: "https://t.me/Mvtrixx",
+    //     icon: <FaTelegramPlane style={style} />,
+    // },
     {
         title: "Linkedin",
         link: "https://www.linkedin.com/in/isaac-chukwuka-2208a1209/",
@@ -94,16 +94,16 @@ export const socialLinks = [
         link: "https://github.com/Matriix69",
         icon: <FaGithub style={style} />,
     },
-    {
-        title: "Youtube",
-        link: "https://www.youtube.com/channel/UC3uDI7f7hAWRoOLtXAKKt4Q",
-        icon: <IoLogoYoutube style={style} />,
-    },
-    {
-        title: "Spotify",
-        link: "https://open.spotify.com/user/0wulflt56xnyk51zubhmbmc8n",
-        icon: <FaSpotify style={style} />,
-    },
+    // {
+    //     title: "Youtube",
+    //     link: "https://www.youtube.com/channel/UC3uDI7f7hAWRoOLtXAKKt4Q",
+    //     icon: <IoLogoYoutube style={style} />,
+    // },
+    // {
+    //     title: "Spotify",
+    //     link: "https://open.spotify.com/user/0wulflt56xnyk51zubhmbmc8n",
+    //     icon: <FaSpotify style={style} />,
+    // },
 ]
 
 export const experience = [

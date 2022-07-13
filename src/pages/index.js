@@ -75,7 +75,7 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <FaReact />
                         </div>
-                        <div className="info-list-paragraph pd pd">
+                        <div className="info-list-paragraph">
                             <p>
                                 For frontend design, I'm personally a huge fan
                                 of
@@ -89,7 +89,7 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <FaNodeJs />
                         </div>
-                        <div className="info-list-paragraph pd">
+                        <div className="info-list-paragraph">
                             <p>
                                 For backend work, my go-to tool is{" "}
                                 <b>Node.js</b>, very efficient and overall
@@ -103,7 +103,7 @@ export default function Home({ data }) {
                         <div className="info-list-icon">
                             <IoLogoFirebase />
                         </div>
-                        <div className="info-list-paragraph pd">
+                        <div className="info-list-paragraph">
                             <p>
                                 For my serverless and cloud computing, my go-to
                                 tool is <b>Firebase</b>, which is part of{" "}

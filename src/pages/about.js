@@ -7,6 +7,7 @@ import { FaUserTie, FaTools, FaCode } from "react-icons/fa"
 import { BiMicrochip, BiCodeAlt } from "react-icons/bi"
 import { IoBarbellOutline } from "react-icons/io5"
 import { CgGames, CgLaptop } from "react-icons/cg"
+import { GrGamepad } from "react-icons/gr"
 import { AiOutlineSmile } from "react-icons/ai"
 import Robo from "../assets/robot.svg"
 import { experience, stack, Interests } from "../constants/constants"
@@ -59,7 +60,7 @@ export default function About() {
                                 <Robo className={styles.bounce} />
                             </div>
 
-                            <p className="pd">
+                            <p className="">
                                 Hi,{" "}
                                 <code className={"hi_gradient"}>I'm Isaac</code>
                                 , a <strong>Software Engineer </strong> with
@@ -71,7 +72,7 @@ export default function About() {
                                 system design.
                             </p>
 
-                            <p className="pd">
+                            <p className="">
                                 I like working with <strong>Javascript</strong>,{" "}
                                 <strong>React.js</strong> and{" "}
                                 <strong>NodeJS</strong> Among other things, and
@@ -123,7 +124,7 @@ export default function About() {
                     <h3 className={styles.sub_heading}>
                         Job <FaUserTie />
                     </h3>
-                    <p className="pd">
+                    <p className="">
                         If you want to hire me, I'm interested to work in
                         companies that offer
                         <strong>
@@ -137,7 +138,7 @@ export default function About() {
                     <h3 className={styles.sub_heading}>
                         Technology <BiMicrochip />
                     </h3>
-                    <p className="pd">
+                    <p className="">
                         I'm fascinated by technological advances which companies
                         such as Google, Apple, Tesla, SpaceX make. also, I make
                         tech videos and review gadgets{" "}
@@ -153,13 +154,13 @@ export default function About() {
                     <h3 className={styles.sub_heading}>
                         Coding <BiCodeAlt />
                     </h3>
-                    <p className="pd">
+                    <p className="">
                         Whenever I have free time, I'm coding, reading up
                         documentation, or learning something new!
                     </p>
 
                     <h3 className={styles.sub_heading}>
-                        Gaming <CgGames />
+                        Video Games <GrGamepad />
                     </h3>
                     <p>
                         I enjoy playing a lot of video games with my favorites
@@ -170,7 +171,7 @@ export default function About() {
                     <h3 className={styles.sub_heading}>
                         Workout <IoBarbellOutline />
                     </h3>
-                    <p className="pd">
+                    <p className="">
                         I need to exercise within the morning before my brain
                         figures out what I‘m doing.
                         <em>
@@ -183,7 +184,7 @@ export default function About() {
                     <h3 className={styles.sub_heading}>
                         Favorite Movies <CgLaptop />
                     </h3>
-                    <p className="pd">
+                    <p className="">
                         I love almost any kind of movie, but I'm more of an
                         animation person, I find them entertaining and very easy
                         to watch, some of my favorites are Fantastic Mr. Fox,

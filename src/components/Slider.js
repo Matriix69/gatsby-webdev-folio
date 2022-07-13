@@ -53,27 +53,34 @@ export default function ProjectDetails({ slides, title }) {
                             }
                             key={idx}
                         >
-                            <GatsbyImage
-                                image={slides.img}
-                                alt={title}
-                            />
+                            <GatsbyImage image={slides.img} alt={title} />
                         </div>
                     ))}
                 </div>
             </div>
-            {/* <div className={styles.slideshowDots}>
+            <div className={styles.slideshowDots}>
                 {slides.map((_, idx) => (
-                    <div 
-                        key={idx} 
-                        className={styles.slideshowDot + " " + (index === idx ? styles.btnActive : null)}
-                        onClick={() => { setIndex(idx); }}
-                        onKeyDown={() => { setIndex(idx); }} 
-                        role="button" 
+                    <button
+                        key={idx}
+                        className={
+                            styles.slideshowDot +
+                            " " +
+                            (index === idx ? styles.btnActive : null)
+                        }
+                        onClick={() => {
+                            setIndex(idx)
+                        }}
+                        onKeyDown={() => {
+                            setIndex(idx)
+                        }}
+                        role="button"
                         aria-label="slide carousel"
-                        tabIndex={0} 
-                    ></div>
+                        tabIndex={0}
+                    >
+                        <span></span>
+                    </button>
                 ))}
-            </div> */}
+            </div>
         </>
     )
 }
