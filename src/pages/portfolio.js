@@ -11,13 +11,14 @@ export default function portfolio({ data }) {
     return (
         <>
             <Seo
-                pageTitle="Web Development Blog | Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws"
+                pageTitle="Portfolio | Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws"
                 pageUrl="portfolio"
-                pageDescription="Web Development portfolio by Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws, Interests, hobbies, tutorials and more"
+                pageDescription="A collection of my software projects by Isaac Chukwuka | JavaScript, React.js, Gatsby.js, Node.js, Firebase, Aws, Interests, hobbies, tutorials and more"
+                pageImage={"og/portfolio.png"}
             />
             <div className={styles.container}>
                 <div className={styles.sub_container}>
-                    <div className={styles.intro}>
+                    <div className={`${styles.intro} intro`}>
                         <h1>Portfolio</h1>
                         <p>Portfolio showcase of some of my work.</p>
                     </div>

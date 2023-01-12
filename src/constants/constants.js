@@ -1,11 +1,11 @@
 import React from "react"
 import {
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaTelegramPlane,
-    FaSpotify,
-} from "react-icons/fa"
+    FiTwitter,
+    FiLinkedin,
+    FiGithub,
+    // FaTelegramPlane,
+    // FaSpotify,
+} from "react-icons/fi"
 import { IoLogoYoutube } from "react-icons/io"
 import Leaf from "../assets/leaf.svg"
 import At from "../assets/at.svg"
@@ -77,7 +77,12 @@ export const socialLinks = [
     {
         title: "Twitter",
         link: "https://twitter.com/isaacchukwuka_",
-        icon: <FaTwitter style={style} />,
+        icon: <FiTwitter style={style} />,
+    },
+    {
+        title: "Github",
+        link: "https://github.com/Matriix69",
+        icon: <FiGithub style={style} />,
     },
     // {
     //     title: "Telegram",
@@ -87,13 +92,9 @@ export const socialLinks = [
     {
         title: "Linkedin",
         link: "https://www.linkedin.com/in/isaac-chukwuka-2208a1209/",
-        icon: <FaLinkedin style={style} />,
+        icon: <FiLinkedin style={style} />,
     },
-    {
-        title: "Github",
-        link: "https://github.com/Matriix69",
-        icon: <FaGithub style={style} />,
-    },
+
     // {
     //     title: "Youtube",
     //     link: "https://www.youtube.com/channel/UC3uDI7f7hAWRoOLtXAKKt4Q",
@@ -108,13 +109,19 @@ export const socialLinks = [
 
 export const experience = [
     {
-        title: "Freelancing full-stack web developer",
-        company: "Matrix Web Development",
+        title: "Freelancing full-stack developer",
+        company: "Matrix Software Labs",
         date: "August 2019 - Current · NG",
         current: true,
     },
     {
-        title: "Front-end engineer",
+        title: "Full-Stack Engineer",
+        company: "Kobobid",
+        date: "September 2022 - Current · Lagos NG",
+        current: true,
+    },
+    {
+        title: "Front-End Engineer",
         company: "Apex application Limited",
         date: "November 2019 - December 2021 · Lagos NG",
         current: false,

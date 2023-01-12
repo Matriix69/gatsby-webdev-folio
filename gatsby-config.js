@@ -74,7 +74,7 @@ module.exports = {
             "Full-Stack Developer | Isaac Chukwuka | JavaScript, TypeScript, Node.js, React.js, next.js, Gatsby.js, MongoDb, Firebase and more",
         contact: "chukwuka1158@gmail.com",
         url: "https://isaacchukwuka.com/",
-        image: `https://isaacchukwuka.com/isaac_chukwuka_logo.png`,
+        image: `https://isaacchukwuka.com/og/default.png`,
         twitterUSername: "@isaacchukwuka_",
         fbAppID: "",
         author: "Isaac chukwuka",

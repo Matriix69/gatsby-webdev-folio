@@ -19,13 +19,13 @@
     font-display: swap;
     src: url(../fonts/medium.woff2) format("woff2");
 }
-@font-face {
-    font-family: "web-sans";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(../fonts/semi-bold.woff2) format("woff2");
-}
+// @font-face {
+//     font-family: "web-sans";
+//     font-style: normal;
+//     font-weight: 600;
+//     font-display: swap;
+//     src: url(../fonts/semi-bold.woff2) format("woff2");
+// }
 @font-face {
     font-family: "web-sans";
     font-style: normal;
@@ -41,11 +41,22 @@
     src: url(../fonts/bold-italic.woff2) format("woff2");
 }
 
+// @font-face {
+//     font-family: "cali";
+//     font-style: normal;
+//     font-weight: 700;
+//     font-display: swap;
+//     src: url(../fonts/cali.woff2) format("woff2");
+// }
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    // outline: 1px solid limegreen !important;
 }
 
 *,
@@ -68,7 +79,7 @@ body,
         "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
 
-    --condensed: "sans", sans-serif;
+    --condensed: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -113,7 +124,7 @@ body {
 }
 .dark {
     --bg-color: #000;
-    --nav-bg: hsla(0, 0%, 0%, 0.8);
+    --nav-bg: hsla(0, 0%, 0%, 0.5);
     // --s: hsl(0, 0%, 7%);
     --nav-bg2: hsla(0, 0%, 7%, 0.8);
     --error-color: rgba(255, 130, 130, 0.884);
@@ -239,11 +250,11 @@ layout & nav
 }
 .fa-secondary {
     transition: all 0.3s ease;
-    fill: var(--accents-3) !important;
+    fill: var(--accents-4) !important;
 }
 .fa-primary {
     transition: all 0.3s ease;
-    fill: var(--accents-5) !important;
+    fill: var(--accents-6) !important;
 }
 .iconColor {
     fill: var(--h-color);
@@ -277,7 +288,7 @@ layout & nav
     @media only screen and (min-width: 800px) {
         box-shadow: var(--header-border-bottom);
         background-color: var(--nav-bg);
-        backdrop-filter: saturate(180%) blur(20px);
+        backdrop-filter: saturate(180%) blur(5px);
     }
 }
 
@@ -305,7 +316,7 @@ layout & nav
 }
 //navbar
 header {
-    padding: 0px 20px;
+    padding: 0px 25px;
     // font-family: $font-stack;
     position: sticky;
     height: 65px;
@@ -335,7 +346,6 @@ header {
             display: flex;
             align-items: center;
 
-            // font-family: var(--condensed);
             svg {
                 height: 25px;
                 width: auto;
@@ -366,10 +376,13 @@ header {
                 color: var(--h-color);
                 font-size: 21px;
                 width: 170px;
+                font-family: var(--condensed) !important;
 
                 span {
                     font-weight: 700;
                     // display: inline-flex;
+                    font-family: var(--condensed) !important;
+
                     width: 100%;
                     &::first-letter {
                         font-size: 0px;
@@ -437,7 +450,7 @@ nav {
             text-decoration: none;
             text-transform: capitalize;
             font-size: var(--font-size-sm);
-            font-weight: 500;
+            font-weight: 700;
             // padding: 8px 16px;
             opacity: 0.7;
             transition: opacity 0.3s ease, border-bottom 0.3s ease;
@@ -462,7 +475,7 @@ nav {
                 transition: all 0.3s ease;
                 padding: 5px 12px;
                 line-height: 1.25rem;
-                font-weight: 500;
+                font-weight: 700;
                 background: var(--h-color);
                 border: 1px solid var(--h-color);
 
@@ -511,7 +524,7 @@ nav {
             font-size: var(--font-size-sm);
             // font-family: $font-stack;
             // background-color: var(--nav-bg);
-            // border-top: 1px solid var(--accents-2);
+            border-top: 1px solid var(--accents-2);
             background-color: var(--nav-bg2);
             // background: linear-gradient(
             //     180deg,
@@ -531,6 +544,7 @@ nav {
             line-height: 1.4;
             font-weight: 500;
             opacity: 0.7;
+            gap: 2px;
 
             svg {
                 width: 1.3em;
@@ -539,8 +553,9 @@ nav {
                 margin-bottom: 2px;
             }
             span {
-                font-size: 10px;
+                font-size: 12px;
                 font-weight: 500;
+                color: var(--accents-6);
             }
         }
     }
@@ -560,6 +575,10 @@ nav {
         .fa-secondary {
             fill: var(--h-color) !important ;
         }
+    }
+
+    span {
+        color: var(--h-color) !important;
     }
 }
 
@@ -617,7 +636,7 @@ project section
 
 .listing {
     position: relative;
-    max-width: 1000px;
+    max-width: 760px;
     margin: 0 auto;
     transition: all 0.3s ease;
 
@@ -652,9 +671,10 @@ project section
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 article {
-    margin: 1rem;
+    // margin: 1rem;
 
     .post {
         display: flex;
@@ -782,7 +802,7 @@ intro list
         p {
             margin: 16px 0 32px;
         }
-        a {
+        .setUp {
             color: var(--accent);
             padding: 0.5rem 1rem;
             border: 2px solid var(--accent);
@@ -795,6 +815,10 @@ intro list
                 color: #fff;
                 background-color: var(--accent);
             }
+        }
+        .ar {
+            color: var(--h-color);
+            box-shadow: inset 0 -3px 0 var(--accent);
         }
         b {
             color: var(--accent);
@@ -867,7 +891,7 @@ footer {
     align-items: center;
     text-align: center;
     background: var(--accents-1);
-    // border-top: 1px solid var(--accents-2);
+    border-top: 1px solid var(--accents-2);
 
     @media screen and (max-width: 800px) {
         display: none;
@@ -889,7 +913,7 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: 0.5rem;
+                // margin-top: 0.5rem;
 
                 svg {
                     width: 1rem;
@@ -942,23 +966,41 @@ socail links on hero and footer
 .headerSocial_footer {
     display: flex;
     justify-content: center;
-    gap: 11px;
+    // gap: 11px;
     margin-top: 11px;
     position: relative;
     z-index: 2 !important;
     cursor: pointer;
     transition: all 0.3s ease;
     -webkit-tap-highlight-color: transparent;
+
+    a {
+        padding: 10px;
+        // &:not(:last-child) {
+        //     margin-right: 15px;
+        //     border-right: 1px solid var(--accents-2);
+        //     padding-right: 15px;
+        // }
+        display: inline-flex;
+        box-sizing: border-box;
+        line-height: 0;
+        color: var(--accents-5);
+
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
 }
 .headerSocial {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    // flex-direction: column;
     gap: 10px;
     // max-width: 320px;
     // margin: 0 auto;
     // flex-flow: wrap;
-    margin-top: 30px;
+    margin-top: 15px;
     position: relative;
     z-index: 2 !important;
     cursor: pointer;
@@ -969,24 +1011,24 @@ socail links on hero and footer
 
     a {
         position: relative;
-        height: 49px;
-        padding: 0 12px;
+        // height: 49px;
+        padding: 10px;
         // color: var(--text-color) !important;
-        // color: var(--accents-7);
+        color: var(--accents-7);
 
         transition: all 0.3s ease-in;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 9px;
-        font-size: 16px;
-        border-radius: 5px;
+        // gap: 9px;
+        // font-size: 16px;
+        // border-radius: 5px;
 
         svg {
-            height: auto;
+            height: 20px;
             width: 20px;
             color: var(--h-color);
-            font-size: 2rem;
+            // font-size: 2rem;
             &:hover {
                 color: var(--accent) !important;
             }
@@ -1050,26 +1092,65 @@ socail links on hero and footer
     }
 }
 
-.Twitter {
-    // background-color: rgb(29, 155, 240);
-    background-color: var(--accents-2);
-    color: var(--accents-7);
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: var(
+        --region-space,
+        clamp(3.75rem, 3.21rem + 2.68vw, 5.625rem)
+    );
+    padding-bottom: var(
+        --region-space,
+        clamp(3.75rem, 3.21rem + 2.68vw, 5.625rem)
+    );
+
+    background-color: var(--accents-1);
+    box-shadow: 0 0 0 100vmax var(--accents-1);
+    clip-path: inset(0 -100vmax);
+
+    h1 {
+        color: var(--h-color);
+        font-weight: bold;
+        font-size: clamp(1.5rem, 1.29rem + 1.07vw, 2.25rem);
+        font-weight: 700;
+
+        @media screen and (max-width: 600px) {
+            font-size: 2rem;
+        }
+    }
+    p {
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
-.Github {
-    background-color: var(--accents-2);
-    color: var(--accents-7);
-}
-.Linkedin {
-    // background-color: #0a66c2;
-    background-color: var(--accents-2);
-    color: var(--accents-7);
-}
-.Telegram {
-    background-color: #0088cc;
-}
-.Youtube {
-    background-color: #f00;
-}
-.Spotify {
-    background-color: #1ed760;
-}
+
+// .Twitter {
+//     background-color: rgb(29, 155, 240);
+//     // background-color: var(--accents-1);
+//     color: #fff;
+//     border: 1px solid var(--accents-2);
+//     background-color: #24292e;
+// }
+// .Github {
+//     background-color: #24292e;
+//     color: #fff;
+
+//     // border: 1px solid var(--accents-2);
+// }
+// .Linkedin {
+//     // background-color: #0a66c2;
+//     background-color: var(--accents-1);
+//     color: var(--accents-7);
+//     border: 1px solid var(--accents-2);
+//     background-color: #24292e;
+//     color: #fff;
+// }
+// .Telegram {
+//     background-color: #0088cc;
+// }
+// .Youtube {
+//     background-color: #f00;
+// }
+// .Spotify {
+//     background-color: #1ed760;
+// }

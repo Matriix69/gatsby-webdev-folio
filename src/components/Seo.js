@@ -28,7 +28,7 @@ const SEO = ({ pageTitle, pageUrl, pageDescription, pageImage }) => (
             const description = pageDescription || seo.description
             const image = pageImage ? `${seo.url}${pageImage}` : seo.image
             const url = pageUrl ? `${seo.url}/${pageUrl}/` : seo.url
-            console.log(pageImage)
+
             return (
                 <React.Fragment>
                     <Helmet>

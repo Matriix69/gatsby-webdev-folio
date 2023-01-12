@@ -9,32 +9,28 @@ export default function Footer() {
     return (
         <footer>
             <div className="wrap">
-                <div className="logo-email">
-                    <div className="headerSocial_footer">
-                        {socialLinks.map((socialLinks, idx) => (
-                            <a
-                                href={socialLinks.link}
-                                key={idx}
-                                title={socialLinks.title}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                {socialLinks.icon}
-                            </a>
-                        ))}
-                    </div>
+                <div className="headerSocial_footer">
+                    {socialLinks.map((socialLinks, idx) => (
+                        <a
+                            href={socialLinks.link}
+                            key={idx}
+                            title={socialLinks.title}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {socialLinks.icon}
+                        </a>
+                    ))}
                 </div>
 
                 <div className="copyright">
                     <p>
-                        Made with
+                        Designed and Made with
                         <span>
                             <HeartBG />
                             <Heart />
                         </span>
-                        by
-                        <code className="hi_gradient">Isaac Chukwuka</code>
-                        {new Date().getFullYear()}
+                        by Isaac Chukwuka {new Date().getFullYear()}
                     </p>
                 </div>
             </div>

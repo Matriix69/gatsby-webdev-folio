@@ -10,6 +10,7 @@ carousel2: ../images/thumbs/portfolio2.png
 carousel3: ../images/thumbs/portfolio3.png
 url: https://isaacchukwuka.com
 github: https://github.com/Matriix69/gatsby-webdev-folio
+preview: og/portfolio.png
 ---
 
 My personal website portfolio, You could say this doubles as some sort of digital resume. Built with Gatsby. Don’t forget to reach out!

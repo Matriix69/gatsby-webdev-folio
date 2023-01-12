@@ -49,18 +49,21 @@ export default function Contact() {
     return (
         <>
             <Seo
-                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | Contact"
+                pageTitle="Contact | Isaac Chukwuka"
                 pageUrl="contact"
+                pageImage={"og/contact.png"}
             />
             <section>
                 <div className={styles.content}>
-                    <div className={styles.intro}>
+                    <div className={"intro"}>
                         <h1>
                             Let's Connect!{" "}
                             <span role="img" aria-label="smile-emoji">
                                 😊
                             </span>
                         </h1>
+                    </div>
+                    <div className={styles.intro}>
                         <p>
                             Please reach out for anything. I’m always interested
                             in hearing about new <strong>projects</strong> and{" "}
@@ -198,7 +201,7 @@ export default function Contact() {
                                                     <div className="spinner"></div>
                                                 </div>
                                             ) : (
-                                                "Send"
+                                                "Say Hi"
                                             )}
                                         </button>
                                     </div>
@@ -227,7 +230,7 @@ export default function Contact() {
                                     rel="noreferrer"
                                     className={socialLinks.title}
                                 >
-                                    {socialLinks.icon} {socialLinks.title}
+                                    {socialLinks.icon}
                                 </a>
                             ))}
                         </div>

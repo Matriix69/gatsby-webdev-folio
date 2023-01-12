@@ -10,6 +10,7 @@ carousel2: ../images/thumbs/facerec2.png
 carousel3: ../images/thumbs/facerec3.png
 url: https://facerecognizitionsbrain.herokuapp.com/" target="_blank
 github: https://github.com/Matriix69/face-rec-app
+preview: og/face.png
 ---
 
 A face recognition app that automatically recognizes faces from any angle with landmarks and alignment using Clarifai AI face dictation model

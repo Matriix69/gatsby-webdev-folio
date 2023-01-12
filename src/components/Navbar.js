@@ -43,9 +43,9 @@ export default function Navbar() {
             <header className={scroll ? "nav-scroll" : ""}>
                 <div className="wrap">
                     <h1 className="nav-title">
-                        <Logo />
                         <Link to="/">
-                            <span>ISaac Chukwuka</span>
+                            <Logo />
+                            {/* <span>Isaac chukwuka</span> */}
                         </Link>
                     </h1>
 

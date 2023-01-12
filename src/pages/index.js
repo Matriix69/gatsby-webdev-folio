@@ -3,18 +3,13 @@ import React from "react"
 //gatsby component import
 import { graphql, Link } from "gatsby"
 
-//contants file
-// import { Info } from "../constants/constants"
-
 //styles
 import "../styles/global.scss"
 import * as styles from "../styles/home.module.scss"
 
-//paticles and typewritter effect
-// import Typewriter from "typewriter-effect"
-
 //iocns
 import { FaReact, FaNodeJs, FaCode } from "react-icons/fa"
+import { BiCode } from "react-icons/bi"
 import { IoLogoFirebase } from "react-icons/io5"
 
 //my components
@@ -22,111 +17,108 @@ import Seo from "../components/Seo"
 import Projects from "../components/Projects"
 import Svg from "../assets/isaac.svg"
 
-// const typingSpeed = 50
-// const deleteSpeed = 1
-
 export default function Home({ data }) {
     const projects = data.projects.nodes
 
     return (
         <>
             <Seo
-                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | JavaScript, TypeScrip, Node.js, React.js."
+                pageTitle="Isaac Chukwuka | Software Engineer"
                 description="I'm a software engineer with hands-on experience developing Fullstack, high-performance applications using cutting-edge technologies"
             />
 
             <section className={styles.home}>
-                <div className={styles.listing}>
-                    <div className={styles.type_container}>
-                        <div className={styles.type_flow}>
-                            <h1>
-                                Hi, <span>I'm Isaac</span>
-                            </h1>
-                            <p>
-                                And I'm passionate about the <span>web.</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <Svg />
-                    </div>
+                <div className={styles.introd}>
+                    <h1>Hey, I'm</h1>
+                    <h2>Isaac Chukwuka</h2>
+                    <p>
+                        I'm a designer, content creator, and a software
+                        tinkerer. I spend my days tapping on keyboards and
+                        Googling stuff ;)
+                    </p>
+                </div>
+                <div className={styles.introd_icon}>
+                    <Svg />
                 </div>
             </section>
 
-            <div className="listing">
-                <div className="wrap">
-                    <div className="info-list">
-                        <div className="info-list-icon">
-                            <FaCode />
-                        </div>
-                        <div className="info-list-paragraph">
-                            <p>
-                                I am a <strong>full-stack web developer</strong>{" "}
-                                /<strong> Content creator</strong> based in
-                                Nigeria, right in the heart of Africa. I
-                                freelance and do remote jobs.
-                            </p>
-                            <Link to="/contact">Set up a meeting</Link>
-                        </div>
+            <section className="listing">
+                <div className="info-list">
+                    <div className="info-list-icon">
+                        <FaCode />
                     </div>
-
-                    <div className="info-list">
-                        <div className="info-list-icon">
-                            <FaReact />
-                        </div>
-                        <div className="info-list-paragraph">
-                            <p>
-                                For frontend design, I'm personally a huge fan
-                                of
-                                <b> React.js</b> and it's ecosystem (e.g.{" "}
-                                <b> Gatsby.js & Next.js</b>).
-                            </p>
-                        </div>
+                    <div className="info-list-paragraph">
+                        <p>
+                            I am a <strong>full-stack Software Engineer</strong>
+                            , Co-founder{" "}
+                            <a
+                                className="ar"
+                                href="https://allroundreview.com/"
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                            >
+                                AllRoundReview.
+                            </a>{" "}
+                            I freelance and do remote jobs.
+                        </p>
+                        <Link className="setUp" to="/contact">
+                            Set up a meeting
+                        </Link>
                     </div>
-
-                    <div className="info-list">
-                        <div className="info-list-icon">
-                            <FaNodeJs />
-                        </div>
-                        <div className="info-list-paragraph">
-                            <p>
-                                For backend work, my go-to tool is{" "}
-                                <b>Node.js</b>, very efficient and overall
-                                developer productive. I have also worked with
-                                PHP in the past
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="info-list">
-                        <div className="info-list-icon">
-                            <IoLogoFirebase />
-                        </div>
-                        <div className="info-list-paragraph">
-                            <p>
-                                For my serverless and cloud computing, my go-to
-                                tool is <b>Firebase</b>, which is part of{" "}
-                                <b>Googles cloud platform</b> (gcp), also{" "}
-                                <b>Amazon web services</b>(aws) as my
-                                alternative.
-                            </p>
-                        </div>
-                    </div>
-
-                    <hr />
-
-                    <h1 className="post-heading">
-                        Projects <FaCode />
-                    </h1>
-
-                    <section className="works">
-                        {projects.slice(0, 2).map((projects, index) => {
-                            return <Projects projects={projects} key={index} />
-                        })}
-                    </section>
                 </div>
-            </div>
+
+                <div className="info-list">
+                    <div className="info-list-icon">
+                        <FaReact />
+                    </div>
+                    <div className="info-list-paragraph">
+                        <p>
+                            For frontend design, I'm personally a huge fan of
+                            <b> React.js</b> and it's ecosystem (e.g.{" "}
+                            <b> Next.js & Gatsby.js</b>).
+                        </p>
+                    </div>
+                </div>
+
+                <div className="info-list">
+                    <div className="info-list-icon">
+                        <FaNodeJs />
+                    </div>
+                    <div className="info-list-paragraph">
+                        <p>
+                            For backend work, my go-to tool is <b>Node.js</b>,
+                            very efficient and overall developer productive. I
+                            have also worked with PHP in the past
+                        </p>
+                    </div>
+                </div>
+
+                <div className="info-list">
+                    <div className="info-list-icon">
+                        <IoLogoFirebase />
+                    </div>
+                    <div className="info-list-paragraph">
+                        <p>
+                            For my serverless and cloud computing, my go-to tool
+                            is <b>Firebase</b>, which is part of{" "}
+                            <b>Googles cloud platform</b> (gcp), also{" "}
+                            <b>Amazon web services</b>(aws) as my alternative.
+                        </p>
+                    </div>
+                </div>
+
+                <hr />
+            </section>
+
+            <section className={styles.built}>
+                <h2 className="post-heading">Some Things I’ve Built</h2>
+
+                <div className="works">
+                    {projects.slice(0, 2).map((projects, index) => {
+                        return <Projects projects={projects} key={index} />
+                    })}
+                </div>
+            </section>
         </>
     )
 }

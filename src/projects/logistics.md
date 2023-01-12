@@ -10,6 +10,7 @@ carousel2: ../images/thumbs/logistics2.png
 carousel3: ../images/thumbs/logistics3.png
 url: https://logistics-77d43.web.app
 github: https://github.com/Matriix69/Logistics-dispatch-app
+preview: og/logistics.png
 ---
 
 Responsive, fast, secure, and feature-rich logistics app for any dispatch logistics company. It features a pricing page which allows customers calculate dispatch cost to any location they want parcels delivered to.

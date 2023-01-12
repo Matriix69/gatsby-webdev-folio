@@ -3,8 +3,8 @@ import * as styles from "../styles/project-details.module.scss"
 import { graphql } from "gatsby"
 import Seo from "../components/Seo"
 import Slide from "../components/Slider"
-import { FaGithub } from "react-icons/fa"
-import { MdLiveTv } from "react-icons/md"
+import { FiGithub } from "react-icons/fi"
+import { MdOpenInNew } from "react-icons/md"
 
 export default function ProjectDetails({ data }) {
     //destructure grahpql data
@@ -19,6 +19,7 @@ export default function ProjectDetails({ data }) {
         carousel3,
         url,
         github,
+        preview,
     } = data.markdownRemark.frontmatter
 
     //images for slide show
@@ -40,21 +41,20 @@ export default function ProjectDetails({ data }) {
                 pageTitle={`${title} | ${data.site.siteMetadata.title}`}
                 pageUrl={`projects/${slug}`}
                 pageDescription={description}
-                // pageImage={thumb}
+                pageImage={preview}
             />
             <section className={styles.top_project_content}>
-                <div className={styles.project_content}>
-                    <div className={styles.heading}>
-                        <h1>{title}</h1>
-                        <div className="post__subtitle">
-                            Built with{" "}
-                            {stack
-                                .split(",")
-                                .map((stack, i) => stack)
-                                .join(", ")}
-                        </div>
+                <div className={styles.heading}>
+                    <h1>{title}</h1>
+                    <div className="post__subtitle">
+                        Built with{" "}
+                        {stack
+                            .split(",")
+                            .map((stack, i) => stack)
+                            .join(", ")}
                     </div>
-
+                </div>
+                <div className={styles.project_content}>
                     <div className={styles.slideWrapper}>
                         <Slide slides={slides} title={title} />
                     </div>
@@ -72,7 +72,7 @@ export default function ProjectDetails({ data }) {
                                 rel="noreferrer"
                                 className={styles.project_live}
                             >
-                                <MdLiveTv />
+                                <MdOpenInNew />
                                 View live
                             </a>
 
@@ -83,7 +83,7 @@ export default function ProjectDetails({ data }) {
                                     rel="noreferrer"
                                     className={styles.project_github}
                                 >
-                                    <FaGithub />
+                                    <FiGithub />
                                     See repo on github
                                 </a>
                             ) : null}
@@ -106,6 +106,7 @@ export const query = graphql`
                 description
                 url
                 github
+                preview
                 carousel1 {
                     childImageSharp {
                         gatsbyImageData

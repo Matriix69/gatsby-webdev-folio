@@ -38,14 +38,15 @@ export default function About() {
     return (
         <>
             <Seo
-                pageTitle="Isaac Chukwuka | Full-Stack Web Developer | About"
+                pageTitle="About | Isaac chukwuka"
                 pageUrl="about"
                 pageDescription="Personal is the perfect theme for developers, designers and other creatives."
+                pageImage={"og/about.png"}
             />
 
             <section>
                 <div className={styles.content}>
-                    <div className={styles.about_img}>
+                    <div className={styles.intro}>
                         <div className={styles.about_img_container}>
                             <StaticImage
                                 className={styles.img}
@@ -54,39 +55,53 @@ export default function About() {
                                 alt="about"
                             />
                         </div>
-                        <div>
-                            <div className={styles.about_hello}>
-                                <h1>Your Host </h1>
-                                <Robo className={styles.bounce} />
-                            </div>
+                        {/* <div className={styles.about_hello}>
+                            <h1>Your Host </h1>
+                            <Robo className={styles.bounce} />
+                        </div> */}
+                    </div>
 
-                            <p className="">
-                                Hi,{" "}
-                                <code className={"hi_gradient"}>I'm Isaac</code>
-                                , a <strong>Software Engineer </strong> with
-                                hands on experience developing Fullstack web
-                                applications and APIs 💻, I do freelance jobs
-                                with a strong educational background in{" "}
-                                <strong>Computer engineering</strong> and full
-                                understanding of data structures, algorithms and
-                                system design.
-                            </p>
+                    <div className={styles.about_img}>
+                        {/* <div className={styles.about_img_container}>
+                            <StaticImage
+                                className={styles.img}
+                                loading="eager"
+                                src="../assets/isaac_chukwuka.jpg"
+                                alt="about"
+                            />
+                        </div> */}
 
-                            <p className="">
-                                I like working with <strong>Javascript</strong>,{" "}
-                                <strong>React.js</strong> and{" "}
-                                <strong>NodeJS</strong> Among other things, and
-                                I'll be sharing my learnings and experience
-                                here, welcome!
-                                <span role="img" aria-label="smile-emoji">
-                                    🙂
-                                </span>
-                            </p>
+                        <div className={styles.about_hello}>
+                            <h1>Your Host </h1>
+                            <Robo className={styles.bounce} />
                         </div>
+
+                        <p className="">
+                            Hey,{" "}
+                            <code className={"hi_gradient"}>I'm Isaac.</code>,
+                            i'm a <strong>Software Engineer </strong> with hands
+                            on experience developing Fullstack web applications
+                            and APIs 💻, with a strong educational background in{" "}
+                            <strong>Computer engineering</strong> and full
+                            understanding of data structures, algorithms and
+                            system design.
+                        </p>
+
+                        <p className="">
+                            I like working with{" "}
+                            <strong>Javascript, TypeScript</strong>,{" "}
+                            <strong>React.js</strong> and <strong>Node</strong>{" "}
+                            Among other things, and I'll be sharing my learnings
+                            and experience here, welcome!
+                            <span role="img" aria-label="smile-emoji">
+                                🙂
+                            </span>
+                        </p>
                     </div>
 
                     <h2 className={styles.heading}>
-                        Work experience <FaCode />
+                        Where I've Worked
+                        {/* <FaCode /> */}
                     </h2>
                     <div className={styles.work}>
                         {experience.map(e => (
@@ -102,7 +117,8 @@ export default function About() {
                     <hr />
 
                     <h2 className={styles.heading}>
-                        Tech stack 1.0 <FaTools />
+                        My Tech stack 1.0
+                        {/* <FaTools /> */}
                     </h2>
                     <p>
                         Here are a few technologies I've been working with
@@ -122,7 +138,8 @@ export default function About() {
                     <h2 className={styles.heading}>Interests 1.0</h2>
 
                     <h3 className={styles.sub_heading}>
-                        Job <FaUserTie />
+                        Job
+                        {/* <FaUserTie /> */}
                     </h3>
                     <p className="">
                         If you want to hire me, I'm interested to work in
@@ -136,7 +153,8 @@ export default function About() {
                     </p>
 
                     <h3 className={styles.sub_heading}>
-                        Technology <BiMicrochip />
+                        Technology
+                        {/* <BiMicrochip /> */}
                     </h3>
                     <p className="">
                         I'm fascinated by technological advances which companies
@@ -152,7 +170,8 @@ export default function About() {
                     </p>
 
                     <h3 className={styles.sub_heading}>
-                        Coding <BiCodeAlt />
+                        Coding
+                        {/* <BiCodeAlt /> */}
                     </h3>
                     <p className="">
                         Whenever I have free time, I'm coding, reading up
@@ -160,7 +179,8 @@ export default function About() {
                     </p>
 
                     <h3 className={styles.sub_heading}>
-                        Video Games <GrGamepad />
+                        Video Games
+                        {/* <GrGamepad /> */}
                     </h3>
                     <p>
                         I enjoy playing a lot of video games with my favorites
@@ -169,7 +189,8 @@ export default function About() {
                     </p>
 
                     <h3 className={styles.sub_heading}>
-                        Workout <IoBarbellOutline />
+                        Workout
+                        {/* <IoBarbellOutline /> */}
                     </h3>
                     <p className="">
                         I need to exercise within the morning before my brain
@@ -182,7 +203,8 @@ export default function About() {
                     </p>
 
                     <h3 className={styles.sub_heading}>
-                        Favorite Movies <CgLaptop />
+                        Favorite Movies
+                        {/* <CgLaptop /> */}
                     </h3>
                     <p className="">
                         I love almost any kind of movie, but I'm more of an
